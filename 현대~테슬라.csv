@@ -1,0 +1,406 @@
+제조국,브랜드,이름,가격(최소),가격(최대),차종,엔진,연비(최소),연비(최대),출력(최소),출력(최대),출시년도,사진번호
+한국,현대,캐스퍼,1375,1960,경형 SUV,가솔린,none,none,none,none,none,none
+한국,현대,더 뉴 아반떼,1975,2826,준중형,"가솔린, LPG",none,none,none,none,none,none
+한국,현대,더 뉴 아반떼 HEV,2597,3304,준중형,가솔린 하이브리드,none,none,none,none,none,none
+한국,현대,더 뉴 아반떼 N,3352,3568,준중형,가솔린,none,none,none,none,none,none
+한국,현대,쏘나타 디 엣지,2546,3917,중형,"가솔린, LPG",none,none,none,none,none,none
+한국,현대,쏘나타 디 엣지 HEV,3330,4064,중형,가솔린 하이브리드,none,none,none,none,none,none
+한국,현대,디 올 뉴 그랜저,3743,5315,준대형,"가솔린, LPG",none,none,none,none,none,none
+한국,현대,디 올 뉴 그랜저 HEV,4409,5516,준대형,가솔린 하이브리드,none,none,none,none,none,none
+한국,현대,아이오닉 6,5267,6768,준대형,전기,none,none,none,none,none,none
+한국,현대,더 뉴 아이오닉 5,5519,6562,중형 SUV,전기,none,none,none,none,none,none
+한국,현대,아이오닉 5 N,8005,,중형 SUV,전기,none,none,none,none,none,none
+한국,현대,아이오닉 5,5272,6495,중형 SUV,전기,none,none,none,none,none,none
+한국,현대,베뉴,1642,2413,소형 SUV,가솔린,none,none,none,none,none,none
+한국,현대,디 올 뉴 코나,2446,3422,소형 SUV,가솔린,none,none,none,none,none,none
+한국,현대,디 올 뉴 코나 HEV,3102,3737,소형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+한국,현대,디 올 뉴 코나 EV,4584,5363,소형 SUV,전기,none,none,none,none,none,none
+한국,현대,더 뉴 코나 HEV,2724,3255,소형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+한국,현대,더 뉴 투싼,2771,4004,준중형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+한국,현대,더 뉴 투싼 HEV,3356,4304,준중형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+한국,현대,디 올 뉴 투싼,2603,3822,준중형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+한국,현대,디 올 뉴 투싼 HEV,3170,4143,준중형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+한국,현대,디 올 뉴 싼타페,3546,4700,중형 SUV,가솔린,none,none,none,none,none,none
+한국,현대,디 올 뉴 싼타페 HEV,4031,5140,중형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+한국,현대,더 뉴 싼타페,3277,4546,중형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+한국,현대,더 뉴 싼타페 HEV,3710,4762,중형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+한국,현대,더 뉴 팰리세이드,3896,5491,대형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+한국,현대,넥쏘,7320,,소형 SUV,수소,none,none,none,none,none,none
+한국,현대,스타리아,2596,7401,승합,"디젤, LPG",none,none,none,none,none,none
+한국,현대,스타리아 HEV,3433,4614,승합,가솔린 하이브리드,none,none,none,none,none,none
+한국,현대,포터2,1719,2546,화물,"LPG, 디젤",none,none,none,none,none,none
+한국,현대,포터2 특장차,2199,8725,화물,"LPG, 디젤",none,none,none,none,none,none
+한국,현대,포터2 Electric,4375,5006,화물,전기,none,none,none,none,none,none
+한국,현대,쏠라티,6451,7144,승합,디젤,none,none,none,none,none,none
+한국,현대,카운티,7173,9412,승합,디젤,none,none,none,none,none,none
+한국,현대,카운티 일렉트릭,19984,20994,승합,전기,none,none,none,none,none,none
+한국,현대,마이티,5084,9886,화물,디젤,none,none,none,none,none,none
+한국,현대,파비스,7935,18238,화물,디젤,none,none,none,none,none,none
+한국,현대,ST1,5980,7195,화물,전기,none,none,none,none,none,none
+한국,제네시스,더 뉴 G70,4347,5326,준대형,가솔린,none,none,none,none,none,none
+한국,제네시스,G70 슈팅 브레이크,4545,5128,준대형,가솔린,none,none,none,none,none,none
+한국,제네시스,디 올 뉴 G80 F/L,5890,7390,준대형,가솔린,none,none,none,none,none,none
+한국,제네시스,Electrified G80,8821,,준대형,전기,none,none,none,none,none,none
+한국,제네시스,디 올 뉴 G80,5548,6860,준대형,가솔린,none,none,none,none,none,none
+한국,제네시스,신형 G90,9445,17610,대형,가솔린,none,none,none,none,none,none
+한국,제네시스,GV60,6776,7749,준중형 SUV,전기,none,none,none,none,none,none
+한국,제네시스,GV70,5040,6565,중형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+한국,제네시스,Electrified GV70,7723,7802,중형 SUV,전기,none,none,none,none,none,none
+한국,제네시스,GV80 F/L,6930,8080,대형 SUV,가솔린,none,none,none,none,none,none
+한국,제네시스,GV80 Coupe,8255,9190,대형 SUV,가솔린,none,none,none,none,none,none
+한국,제네시스,GV80,6478,7645,대형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+한국,기아,더 뉴 모닝,1290,1820,경형,가솔린,none,none,none,none,none,none
+한국,기아,모닝 어반,1175,1540,경형,가솔린,none,none,none,none,none,none
+한국,기아,더 뉴 레이 PE,1330,1865,경형,가솔린,none,none,none,none,none,none
+한국,기아,더 레이 EV,2735,2955,경형,전기,none,none,none,none,none,none
+한국,기아,더 뉴 K3,1765,2507,준중형,가솔린,none,none,none,none,none,none
+한국,기아,더 뉴 K3 GT,2745,2784,준중형,가솔린,none,none,none,none,none,none
+한국,기아,더 뉴 K5,2435,3526,중형,"가솔린, LPG",none,none,none,none,none,none
+한국,기아,더 뉴 K5 HEV,3326,3954,중형,가솔린 하이브리드,none,none,none,none,none,none
+한국,기아,K8,2910,4624,준대형,"가솔린, LPG",none,none,none,none,none,none
+한국,기아,K8 HEV,3910,4788,준대형,가솔린 하이브리드,none,none,none,none,none,none
+한국,기아,더 뉴 K9,5815,8685,대형,가솔린,none,none,none,none,none,none
+한국,기아,EV3,4208,5108,준중형 SUV,전기,none,none,none,none,none,none
+한국,기아,디 올 뉴 니로 EV,5114,5393,준중형 SUV,전기,none,none,none,none,none,none
+한국,기아,니로 플러스,4600,5108,준중형 SUV,전기,none,none,none,none,none,none
+한국,기아,디 올 뉴 니로 HEV,2856,3519,준중형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+한국,기아,더 뉴 셀토스,2087,2903,소형 SUV,가솔린,none,none,none,none,none,none
+한국,기아,디 올 뉴 스포티지,2492,3892,준중형 SUV,"가솔린, 디젤, LPG",none,none,none,none,none,none
+한국,기아,디 올 뉴 스포티지 HEV,3331,4197,준중형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+한국,기아,더 뉴 EV6,5540,6602,중형 SUV,전기,none,none,none,none,none,none
+한국,기아,EV6,5130,6635,중형 SUV,전기,none,none,none,none,none,none
+한국,기아,EV6 GT,7584,7605,중형 SUV,전기,none,none,none,none,none,none
+한국,기아,더 뉴 쏘렌토,3506,4682,중형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+한국,기아,더 뉴 쏘렌토 HEV,3929,4915,중형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+한국,기아,신형 쏘렌토 4세대,3024,4543,중형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+한국,기아,신형 쏘렌토 HEV 4세대,3773,4795,중형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+한국,기아,모하비 더 마스터,5054,6097,대형 SUV,디젤,none,none,none,none,none,none
+한국,기아,EV9,7728,9124,대형 SUV,전기,none,none,none,none,none,none
+한국,기아,더 뉴 카니발,3470,9200,RV/MPV,"디젤, 가솔린",none,none,none,none,none,none
+한국,기아,더 뉴 카니발 HEV,3925,9650,RV/MPV,가솔린 하이브리드,none,none,none,none,none,none
+한국,기아,봉고3 트럭,1659,2631,화물,"LPG, 디젤",none,none,none,none,none,none
+한국,기아,봉고3 특장차,2122,4115,화물,"LPG, 디젤",none,none,none,none,none,none
+한국,기아,봉고3 EV,4185,6198,화물,전기,none,none,none,none,none,none
+한국,쉐보레,트랙스 크로스오버,2188,2880,소형 SUV,가솔린,none,none,none,none,none,none
+한국,쉐보레,더 뉴 트레일블레이저,2699,3339,소형 SUV,가솔린,none,none,none,none,none,none
+한국,쉐보레,트레일블레이저,2589,2999,소형 SUV,가솔린,none,none,none,none,none,none
+한국,쉐보레,더 넥스트 이쿼녹스,3145,4145,중형 SUV,가솔린,none,none,none,none,none,none
+한국,쉐보레,트래버스,5640,6615,대형 SUV,가솔린,none,none,none,none,none,none
+한국,쉐보레,타호,9390,9500,대형 SUV,가솔린,none,none,none,none,none,none
+한국,쉐보레,리얼 뉴 콜로라도,4050,4889,화물,가솔린,none,none,none,none,none,none
+한국,GMC,Sierra,9330,9550,화물,가솔린,none,none,none,none,none,none
+한국,KG모빌리티,더 뉴 티볼리,1898,2807,소형 SUV,가솔린,none,none,none,none,none,none
+한국,KG모빌리티,더 뉴 티볼리 에어,2312,2719,소형 SUV,가솔린,none,none,none,none,none,none
+한국,KG모빌리티,리스펙 코란도,2445,3060,중형 SUV,가솔린,none,none,none,none,none,none
+한국,KG모빌리티,코란도 EV,4243,4786,준중형 SUV,전기,none,none,none,none,none,none
+한국,KG모빌리티,코란도 이모션,4057,4590,중형 SUV,전기,none,none,none,none,none,none
+한국,KG모빌리티,더 뉴 토레스,2666,3761,중형 SUV,"가솔린, LPG",none,none,none,none,none,none
+한국,KG모빌리티,토레스 EVX,4438,5287,중형 SUV,전기,none,none,none,none,none,none
+한국,KG모빌리티,토레스,2627,3753,중형 SUV,"가솔린, LPG",none,none,none,none,none,none
+한국,KG모빌리티,렉스턴 뉴 아레나,4010,5255,대형 SUV,디젤,none,none,none,none,none,none
+한국,KG모빌리티,렉스턴 써밋,6050,,대형 SUV,디젤,none,none,none,none,none,none
+한국,KG모빌리티,렉스턴 스포츠,2827,3974,화물,디젤,none,none,none,none,none,none
+한국,KG모빌리티,렉스턴 스포츠 쿨멘,2879,4031,화물,디젤,none,none,none,none,none,none
+한국,KG모빌리티,렉스턴 스포츠 칸,3088,4469,화물,디젤,none,none,none,none,none,none
+한국,KG모빌리티,렉스턴 스포츠 칸 쿨멘,3140,4246,화물,디젤,none,none,none,none,none,none
+한국,르노코리아,더 뉴 SM6,2871,3708,중형,"가솔린, LPG",none,none,none,none,none,none
+한국,르노코리아,Arkana,2285,2914,소형 SUV,가솔린,none,none,none,none,none,none
+한국,르노코리아,Arkana E-TECH,2988,3310,소형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+한국,르노코리아,XM3,2023,2914,소형 SUV,가솔린,none,none,none,none,none,none
+한국,르노코리아,XM3 E-TECH,2938,3660,소형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+한국,르노코리아,더 뉴 QM6,2840,3793,중형 SUV,"LPG, 가솔린",none,none,none,none,none,none
+한국,르노코리아,QM6 Quest,2495,3220,화물,LPG,none,none,none,none,none,none
+한국,르노코리아,뉴 마스터,3685,3845,승합,디젤,none,none,none,none,none,none
+한국,스마트 EV,EV Z,2750,,경형,전기,none,none,none,none,none,none
+한국,스마트 EV,D2P,1980,,화물,전기,none,none,none,none,none,none
+한국,스마트 EV,D2C,1980,,화물,전기,none,none,none,none,none,none
+한국,대창모터스,다니고 카고,3290,3880,화물,전기,none,none,none,none,none,none
+한국,대창모터스,다니고 특장,4310,5780,화물,전기,none,none,none,none,none,none
+한국,디피코,포트로 P250,2233,2288,경형,전기,none,none,none,none,none,none
+한국,디피코,포트로 P350,3245,3333,경형,전기,none,none,none,none,none,none
+한국,쎄보모빌리티,CEVO-C SE,1570,1690,경형,전기,none,none,none,none,none,none
+한국,제이스 모빌리티,이티밴,3120,3990,화물,전기,none,none,none,none,none,none
+한국,EVKMC,마사다 QQ밴,1950,,경형,전기,none,none,none,none,none,none
+한국,EVKMC,마사다 밴,3780,3980,화물,전기,none,none,none,none,none,none
+한국,EVKMC,마사다 픽업,3779,,화물,전기,none,none,none,none,none,none
+한국,마이브,M1,1892,,경형,전기,none,none,none,none,none,none
+한국,모빌리티네트웍스,SE-A,3980,,화물,전기,none,none,none,none,none,none
+유럽,벤츠,The New A-Class F/L,4710,6650,소형,가솔린,none,none,none,none,none,none
+유럽,벤츠,The New A-Class,4110,7310,소형,"가솔린, 디젤",none,none,none,none,none,none
+유럽,벤츠,The New C-Class,6200,7701,중형,가솔린,none,none,none,none,none,none
+유럽,벤츠,New C-Class,6450,10090,중형,가솔린,none,none,none,none,none,none
+유럽,벤츠,The New CLA-Class,6250,6320,중형,가솔린,none,none,none,none,none,none
+유럽,벤츠,CLA-Class,5630,8950,중형,가솔린,none,none,none,none,none,none
+유럽,벤츠,The All New CLE,7270,10080,중형,가솔린,none,none,none,none,none,none
+유럽,벤츠,The New CLS-Class,9500,14040,준대형,"디젤, 가솔린",none,none,none,none,none,none
+유럽,벤츠,The New CLS-Class,12680,12760,준대형,가솔린,none,none,none,none,none,none
+유럽,벤츠,The New E-Class,7390,12300,준대형,"가솔린, 디젤",none,none,none,none,none,none
+유럽,벤츠,The New E-Class,6780,12980,준대형,"가솔린, 디젤, 전기 하이브리드",none,none,none,none,none,none
+유럽,벤츠,The New S-Class,14180,29900,대형,"가솔린, 전기 하이브리드, 디젤",none,none,none,none,none,none
+유럽,벤츠,S-Class,22760,,대형,가솔린,none,none,none,none,none,none
+유럽,벤츠,Maybach GLS-Class F/L,27900,31900,대형 SUV,가솔린,none,none,none,none,none,none
+유럽,벤츠,The New Maybach S-Class,27300,59000,대형,가솔린,none,none,none,none,none,none
+유럽,벤츠,Maybach GLS-Class,26000,29900,대형 SUV,가솔린,none,none,none,none,none,none
+유럽,벤츠,The new SL-Class,23500,26300,스포츠카,가솔린,none,none,none,none,none,none
+유럽,벤츠,AMG GT,18260,25360,스포츠카,가솔린,none,none,none,none,none,none
+유럽,벤츠,The New AMG GT 4door Coupe,14450,24740,스포츠카,가솔린,none,none,none,none,none,none
+유럽,벤츠,AMG GT 4door Coupe,13760,24160,스포츠카,가솔린,none,none,none,none,none,none
+유럽,벤츠,The New EQA,6790,7360,중형 SUV,전기,none,none,none,none,none,none
+유럽,벤츠,EQA,5990,7450,중형 SUV,전기,none,none,none,none,none,none
+유럽,벤츠,The New EQB,7660,8200,중형 SUV,전기,none,none,none,none,none,none
+유럽,벤츠,EQB,6900,8200,중형 SUV,전기,none,none,none,none,none,none
+유럽,벤츠,EQC,9560,9590,중형 SUV,전기,none,none,none,none,none,none
+유럽,벤츠,The New EQE SUV,10990,13400,중형 SUV,전기,none,none,none,none,none,none
+유럽,벤츠,EQE,9210,10990,준대형,전기,none,none,none,none,none,none
+유럽,벤츠,EQE AMG,14520,,준대형,전기,none,none,none,none,none,none
+유럽,벤츠,EQS,15700,19000,대형,전기,none,none,none,none,none,none
+유럽,벤츠,EQS AMG,21440,21600,대형,전기,none,none,none,none,none,none
+유럽,벤츠,EQS SUV,15410,18680,대형 SUV,전기,none,none,none,none,none,none
+유럽,벤츠,GLB-Class F/L,6210,7710,소형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+유럽,벤츠,GLB-Class,5560,7500,소형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+유럽,벤츠,GLA-Class F/L,6790,6860,준중형 SUV,가솔린,none,none,none,none,none,none
+유럽,벤츠,GLA-Class,6090,8320,준중형 SUV,가솔린,none,none,none,none,none,none
+유럽,벤츠,The new GLC-Class,7680,10400,중형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+유럽,벤츠,GLC-Class,7050,14000,중형 SUV,"가솔린, 전기 하이브리드, 디젤",none,none,none,none,none,none
+유럽,벤츠,The New GLE-Class,11300,16060,대형 SUV,"가솔린, 디젤, 전기 하이브리드",none,none,none,none,none,none
+유럽,벤츠,The GLE-Class,10300,19690,대형 SUV,"가솔린, 디젤, 전기 하이브리드",none,none,none,none,none,none
+유럽,벤츠,The New GLS-Class F/L,16160,18150,대형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+유럽,벤츠,The New GLS-Class,14300,18080,대형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+유럽,벤츠,G-Class,17400,29700,대형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+유럽,BMW,New 1 Series,4600,5140,소형,가솔린,none,none,none,none,none,none
+유럽,BMW,New 2 Series 액티브 투어러,4400,5270,준중형,"가솔린, 디젤",none,none,none,none,none,none
+유럽,BMW,2 Series 그란쿠페,4680,5220,준중형,가솔린,none,none,none,none,none,none
+유럽,BMW,3 Series F/L,5590,7110,중형,"가솔린, 디젤, 전기 하이브리드",none,none,none,none,none,none
+유럽,BMW,3 Series,5020,8270,중형,"가솔린, 디젤, 전기 하이브리드",none,none,none,none,none,none
+유럽,BMW,New 4 Series,5860,7630,중형,"가솔린, 디젤",none,none,none,none,none,none
+유럽,BMW,i4,7550,8480,중형,전기,none,none,none,none,none,none
+유럽,BMW,The New 5 Series,6880,9540,준대형,"가솔린, 디젤, 전기 하이브리드",none,none,none,none,none,none
+유럽,BMW,The New 5 Series,6660,8840,준대형,"가솔린, 디젤, 전기 하이브리드",none,none,none,none,none,none
+유럽,BMW,i5,9290,10170,준대형,전기,none,none,none,none,none,none
+유럽,BMW,i5 M,13490,13890,준대형,전기,none,none,none,none,none,none
+유럽,BMW,New 6 Series,8410,11610,준대형,"가솔린, 디젤",none,none,none,none,none,none
+유럽,BMW,The New 7 Series,14730,22600,대형,"가솔린, 디젤, 전기 하이브리드",none,none,none,none,none,none
+유럽,BMW,7 Series,13870,23340,대형,"가솔린, 디젤, 전기 하이브리드",none,none,none,none,none,none
+유럽,BMW,The New i7,16690,24050,대형,전기,none,none,none,none,none,none
+유럽,BMW,i7 M,23180,26340,대형,전기,none,none,none,none,none,none
+유럽,BMW,8 Series,13440,13860,대형,"가솔린, 디젤",none,none,none,none,none,none
+유럽,BMW,M,6080,24940,스포츠카,"전기, 가솔린, 하이브리드",none,none,none,none,none,none
+유럽,BMW,The New Z4,7330,9880,스포츠카,가솔린,none,none,none,none,none,none
+유럽,BMW,All New Z4,6440,9110,스포츠카,가솔린,none,none,none,none,none,none
+유럽,BMW,iX1,6690,6960,소형 SUV,전기,none,none,none,none,none,none
+유럽,BMW,The New X1,5820,6690,소형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+유럽,BMW,New X2,6830,,준중형 SUV,가솔린,none,none,none,none,none,none
+유럽,BMW,X2,5570,6010,소형 SUV,가솔린,none,none,none,none,none,none
+유럽,BMW,New iX3,7850,8260,중형 SUV,전기,none,none,none,none,none,none
+유럽,BMW,The New X3,6650,9060,중형 SUV,"가솔린, 전기 하이브리드, 디젤",none,none,none,none,none,none
+유럽,BMW,X3,8510,,중형 SUV,디젤,none,none,none,none,none,none
+유럽,BMW,The All New X4,6870,8600,중형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+유럽,BMW,iX,14420,15360,중형 SUV,전기,none,none,none,none,none,none
+유럽,BMW,New X5,11610,14360,대형 SUV,"가솔린, 디젤, 전기 하이브리드",none,none,none,none,none,none
+유럽,BMW,The All New X5,11250,13250,대형 SUV,"가솔린, 디젤, 전기 하이브리드",none,none,none,none,none,none
+유럽,BMW,New X6,12580,13770,대형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+유럽,BMW,New X6,12020,13720,대형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+유럽,BMW,New X7,14720,15820,대형 SUV,"가솔린 하이브리드, 디젤",none,none,none,none,none,none
+유럽,BMW,The XM,22330,26840,대형 SUV,가솔린 전기 하이브리드,none,none,none,none,none,none
+유럽,BMW,New M2,8990,9490,스포츠카,가솔린,none,none,none,none,none,none
+유럽,BMW,New X1 M,7150,7580,중형 SUV,가솔린,none,none,none,none,none,none
+유럽,BMW,New X5 M,15800,19020,중형 SUV,가솔린,none,none,none,none,none,none
+유럽,BMW,New X6 M,15910,19420,대형 SUV,가솔린,none,none,none,none,none,none
+유럽,아우디,New A3,4233,6137,준중형,가솔린,none,none,none,none,none,none
+유럽,아우디,The New A4,5454,8801,중형,"가솔린, 디젤",none,none,none,none,none,none
+유럽,아우디,The New A5,6096,12808,중형,"가솔린, 디젤",none,none,none,none,none,none
+유럽,아우디,The New RS3,7691,7770,중형,가솔린,none,none,none,none,none,none
+유럽,아우디,The New A6,6872,17550,준대형,"가솔린, 디젤",none,none,none,none,none,none
+유럽,아우디,The New A7,9356,18180,준대형,"가솔린, 전기 하이브리드, 디젤",none,none,none,none,none,none
+유럽,아우디,The New A8 F/L,14038,21630,대형,"가솔린, 디젤",none,none,none,none,none,none
+유럽,아우디,The New A8,20548,20842,대형,가솔린,none,none,none,none,none,none
+유럽,아우디,The New R8,25757,,스포츠카,가솔린,none,none,none,none,none,none
+유럽,아우디,The New Q2,4090,4440,소형 SUV,디젤,none,none,none,none,none,none
+유럽,아우디,Q3,4966,6001,준중형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+유럽,아우디,Q4 e-tron,5970,7289,중형 SUV,전기,none,none,none,none,none,none
+유럽,아우디,The New Q5,7043,10241,중형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+유럽,아우디,The New Q7,9897,12987,대형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+유럽,아우디,SQ7,14758,14800,대형 SUV,가솔린,none,none,none,none,none,none
+유럽,아우디,Q8,10142,18450,대형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+유럽,아우디,Q8 e-tron,10860,13560,대형 SUV,전기,none,none,none,none,none,none
+유럽,아우디,SQ8 e-tron,15460,,대형 SUV,전기,none,none,none,none,none,none
+유럽,아우디,e-tron,11650,14310,대형 SUV,전기,none,none,none,none,none,none
+유럽,아우디,e-tron GT,14332,20820,스포츠카,전기,none,none,none,none,none,none
+유럽,폭스바겐,ID.4,5490,5990,중형 SUV,전기,none,none,none,none,none,none
+유럽,폭스바겐,The Golf GTI,4790,4970,준중형,가솔린,none,none,none,none,none,none
+유럽,폭스바겐,The Golf 8,3840,4140,준중형,디젤,none,none,none,none,none,none
+유럽,폭스바겐,The New Jetta F/L,3290,3810,준중형,가솔린,none,none,none,none,none,none
+유럽,폭스바겐,The New Jetta,2950,3285,준중형,가솔린,none,none,none,none,none,none
+유럽,폭스바겐,The New Passat GT,4313,5322,중형,디젤,none,none,none,none,none,none
+유럽,폭스바겐,The New Arteon,5870,6370,중형,디젤,none,none,none,none,none,none
+유럽,폭스바겐,Arteon,5324,6114,중형,디젤,none,none,none,none,none,none
+유럽,폭스바겐,T-Roc,3241,3830,소형 SUV,디젤,none,none,none,none,none,none
+유럽,폭스바겐,The new Tiguan Allspace,4890,5480,중형 SUV,"가솔린, 디젤",none,none,none,none,none,none
+유럽,폭스바겐,The New Tiguan,4390,4990,중형 SUV,디젤,none,none,none,none,none,none
+유럽,폭스바겐,The Touareg,8990,10590,대형 SUV,디젤,none,none,none,none,none,none
+유럽,미니,New Hatch,3660,5500,소형,가솔린,none,none,none,none,none,none
+유럽,미니,Hatch,3230,5120,소형,가솔린,none,none,none,none,none,none
+유럽,미니,The New Electric,5140,5350,소형,전기,none,none,none,none,none,none
+유럽,미니,New Convertible,4700,5930,소형,가솔린,none,none,none,none,none,none
+유럽,미니,The New Clubman,3970,6340,소형,가솔린,none,none,none,none,none,none
+유럽,미니,The New Countryman 3세대,4990,6700,소형 SUV,가솔린,none,none,none,none,none,none
+유럽,미니,The New Countryman,4770,6550,소형 SUV,가솔린,none,none,none,none,none,none
+유럽,볼보,C40 Recharge,6790,6865,중형 SUV,전기,none,none,none,none,none,none
+유럽,볼보,The New S60,5610,5640,중형,가솔린,none,none,none,none,none,none
+유럽,볼보,S90 Recharge,8647,8790,중형,가솔린 전기 하이브리드,none,none,none,none,none,none
+유럽,볼보,The New S90,6350,7400,대형,가솔린,none,none,none,none,none,none
+유럽,볼보,The New V60 Cross Country,5530,6260,중형,가솔린 하이브리드,none,none,none,none,none,none
+유럽,볼보,V90 Cross Country,7100,8070,대형,가솔린 하이브리드,none,none,none,none,none,none
+유럽,볼보,EX30,4945,5516,소형 SUV,전기,none,none,none,none,none,none
+유럽,볼보,The New XC40,4840,5430,소형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+유럽,볼보,XC40 Recharge,6690,6769,소형 SUV,전기,none,none,none,none,none,none
+유럽,볼보,The New XC40,4609,5063,소형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+유럽,볼보,XC60 Recharge,8590,8640,중형 SUV,가솔린 전기 하이브리드,none,none,none,none,none,none
+유럽,볼보,The New XC60,6290,7400,중형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+유럽,볼보,XC60,6014,8213,중형 SUV,"가솔린 하이브리드, 전기",none,none,none,none,none,none
+유럽,볼보,XC90 Recharge,11470,11520,대형 SUV,가솔린 전기 하이브리드,none,none,none,none,none,none
+유럽,볼보,The New XC90,8580,9650,대형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+유럽,폴스타,폴스타 2 F/L,5490,6389,중형,전기,none,none,none,none,none,none
+유럽,폴스타,폴스타 2,5490,5990,중형,전기,none,none,none,none,none,none
+유럽,재규어,New XF,6800,7200,준대형,가솔린,none,none,none,none,none,none
+유럽,재규어,The New F-Type,10351,11001,스포츠카,가솔린,none,none,none,none,none,none
+유럽,재규어,New F-Pace,7790,8320,중형 SUV,가솔린,none,none,none,none,none,none
+유럽,재규어,I-Pace,11690,12850,중형 SUV,전기,none,none,none,none,none,none
+유럽,랜드로버,New Range Rover Evoque F/L,7400,8030,준중형 SUV,가솔린,none,none,none,none,none,none
+유럽,랜드로버,New Range Rover Evoque,6880,7840,준중형 SUV,가솔린,none,none,none,none,none,none
+유럽,랜드로버,New Discovery Sport F/L,7290,7660,중형 SUV,가솔린,none,none,none,none,none,none
+유럽,랜드로버,New Discovery Sport,6440,7200,중형 SUV,가솔린,none,none,none,none,none,none
+유럽,랜드로버,All New Discovery,9090,12760,중형 SUV,가솔린 디젤,none,none,none,none,none,none
+유럽,랜드로버,New Range Rover Velar,9010,12420,중형 SUV,가솔린 전기 하이브리드,none,none,none,none,none,none
+유럽,랜드로버,Range Rover Velar,9810,11990,중형 SUV,가솔린,none,none,none,none,none,none
+유럽,랜드로버,All New Range Rover Sport,14140,28520,중형 SUV,가솔린 전기 하이브리드 디젤,none,none,none,none,none,none
+유럽,랜드로버,New Range Rover Sport,13117,18007,중형 SUV,가솔린 디젤,none,none,none,none,none,none
+유럽,랜드로버,The New Range Rover,18820,32660,대형 SUV,가솔린 전기 하이브리드 디젤,none,none,none,none,none,none
+유럽,랜드로버,New Range Rover,17197,20657,대형 SUV,디젤 가솔린,none,none,none,none,none,none
+유럽,랜드로버,New Defender,9960,14730,대형 SUV,가솔린 디젤,none,none,none,none,none,none
+유럽,포르쉐,718 Boxster,9630,13530,스포츠카,가솔린,none,none,none,none,none,none
+유럽,포르쉐,718 Cayman,9160,13050,스포츠카,가솔린,none,none,none,none,none,none
+유럽,포르쉐,The New 911,17110,32600,스포츠카,가솔린,none,none,none,none,none,none
+유럽,포르쉐,The New Panamera,17670,30910,스포츠카,가솔린 전기 하이브리드,none,none,none,none,none,none
+유럽,포르쉐,Panamera,15030,31780,스포츠카,가솔린 전기 하이브리드,none,none,none,none,none,none
+유럽,포르쉐,The New Cayenne,13310,26700,중형 SUV,가솔린 전기 하이브리드,none,none,none,none,none,none
+유럽,포르쉐,The New Cayenne,11720,24680,중형 SUV,가솔린 전기 하이브리드,none,none,none,none,none,none
+유럽,포르쉐,The New Macan,10300,12700,중형 SUV,가솔린,none,none,none,none,none,none
+유럽,포르쉐,Taycan,12380,24740,스포츠카,전기,none,none,none,none,none,none
+유럽,페라리,296 GTB,39800,41500,스포츠카,가솔린 전기 하이브리드,none,none,none,none,none,none
+유럽,페라리,296 GTS,"46,100",,스포츠카,가솔린 전기 하이브리드,none,none,none,none,none,none
+유럽,페라리,Roma,"32,000",,스포츠카,가솔린,none,none,none,none,none,none
+유럽,페라리,Portofino M,"38,830",,스포츠카,가솔린,none,none,none,none,none,none
+유럽,페라리,Portofino,"28,000",,스포츠카,가솔린,none,none,none,none,none,none
+유럽,페라리,812 GTS,"51,500",,스포츠카,가솔린,none,none,none,none,none,none
+유럽,페라리,812 Superfast,"46,900",,스포츠카,가솔린,none,none,none,none,none,none
+유럽,페라리,F8 Tributo,"36,000",,스포츠카,가솔린,none,none,none,none,none,none
+유럽,페라리,F8 Spider,"39,700",,스포츠카,가솔린,none,none,none,none,none,none
+유럽,페라리,SF90 Stradale,"64,000",,스포츠카,가솔린 전기 하이브리드,none,none,none,none,none,none
+유럽,페라리,SF90 Spider,"69,357",,스포츠카,가솔린 전기 하이브리드,none,none,none,none,none,none
+유럽,람보르기니,Huracan EVO,32890,43500,스포츠카,가솔린,none,none,none,none,none,none
+유럽,람보르기니,Urus Performante,"32,890",,대형 SUV,가솔린,none,none,none,none,none,none
+유럽,람보르기니,Urus S,"29,000",,대형 SUV,가솔린,none,none,none,none,none,none
+유럽,람보르기니,Urus,"25,513",,대형 SUV,가솔린,none,none,none,none,none,none
+유럽,마세라티,Ghibli,13600,20200,중형,가솔린 하이브리드,none,none,none,none,none,none
+유럽,마세라티,Quattroporte,17810,31200,대형,가솔린,none,none,none,none,none,none
+유럽,마세라티,MC20,31000,33700,스포츠카,가솔린,none,none,none,none,none,none
+유럽,마세라티,MC20 Cielo,"38,300",,스포츠카,가솔린,none,none,none,none,none,none
+유럽,마세라티,Grecale,9900,16900,중형 SUV,가솔린,none,none,none,none,none,none
+유럽,마세라티,Levante,12400,24500,대형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+유럽,맥라렌,GT,"29,700",,스포츠카,가솔린,none,none,none,none,none,none
+유럽,맥라렌,570S,26500,28400,스포츠카,가솔린,none,none,none,none,none,none
+유럽,맥라렌,600LT,29900,31500,스포츠카,가솔린,none,none,none,none,none,none
+유럽,맥라렌,720S,35900,38500,스포츠카,가솔린,none,none,none,none,none,none
+유럽,맥라렌,765LT,"49,300",,스포츠카,가솔린,none,none,none,none,none,none
+유럽,맥라렌,Artura,"29,900",,스포츠카,가솔린 전기 하이브리드,none,none,none,none,none,none
+유럽,애스턴마틴,Vantage,19800,25900,스포츠카,가솔린,none,none,none,none,none,none
+유럽,애스턴마틴,DB11,26400,29500,스포츠카,가솔린,none,none,none,none,none,none
+유럽,애스턴마틴,DBS,36900,41900,스포츠카,가솔린,none,none,none,none,none,none
+유럽,애스턴마틴,DBX,24800,25600,대형 SUV,가솔린,none,none,none,none,none,none
+유럽,애스턴마틴,DBX707,"31,700",,대형 SUV,가솔린,none,none,none,none,none,none
+유럽,푸조,All-New e-208,4900,5300,소형,전기,none,none,none,none,none,none
+유럽,푸조,New 308,3650,4350,준중형,디젤,none,none,none,none,none,none
+유럽,푸조,New 508,4590,5390,중형,디젤,none,none,none,none,none,none
+유럽,푸조,All-New e-2008,5290,5490,소형 SUV,전기,none,none,none,none,none,none
+유럽,푸조,All-New 2008,3700,4000,소형 SUV,디젤,none,none,none,none,none,none
+유럽,푸조,New 3008,4220,5050,RV/MPV,가솔린 디젤,none,none,none,none,none,none
+유럽,푸조,New 5008,4600,5100,중형 SUV,가솔린 디젤,none,none,none,none,none,none
+유럽,푸조,New 408,4290,4690,중형 SUV,가솔린,none,none,none,none,none,none
+유럽,시트로엥,C3 Aircross,3258,3300,소형 SUV,디젤,none,none,none,none,none,none
+유럽,시트로엥,Grand C4 Spacetourer,4280,4640,RV/MPV,디젤,none,none,none,none,none,none
+유럽,시트로엥,New C4 Cactus,"3,280",,소형 SUV,디젤,none,none,none,none,none,none
+유럽,시트로엥,C5 Aircross,4130,4630,소형 SUV,디젤,none,none,none,none,none,none
+유럽,DS,DS3 Crossback,3980,4374,소형 SUV,디젤,none,none,none,none,none,none
+유럽,DS,DS3 Crossback E-Tense,5690,5790,소형 SUV,전기,none,none,none,none,none,none
+유럽,DS,DS4,4460,5160,중형 SUV,디젤,none,none,none,none,none,none
+유럽,DS,DS7 Crossback,5090,5590,중형 SUV,가솔린,none,none,none,none,none,none
+유럽,벤틀리,New Continental,32890,46310,대형,가솔린,none,none,none,none,none,none
+유럽,벤틀리,All New Flying Spur,32920,34700,대형,가솔린,none,none,none,none,none,none
+유럽,벤틀리,New Bentayga,29600,39390,대형 SUV,가솔린,none,none,none,none,none,none
+유럽,롤스로이스,New Ghost,47100,60400,대형,가솔린,none,none,none,none,none,none
+유럽,롤스로이스,Phantom II,71200,82600,대형,가솔린,none,none,none,none,none,none
+유럽,롤스로이스,Phantom,63000,75000,대형,가솔린,none,none,none,none,none,none
+유럽,롤스로이스,Wraith,"40,000",,대형,가솔린,none,none,none,none,none,none
+유럽,롤스로이스,Spectre,"62,200",,대형,전기,none,none,none,none,none,none
+유럽,롤스로이스,Cullinan,46900,63700,대형 SUV,가솔린,none,none,none,none,none,none
+일본,토요타,Prius,3990,4990,준중형,가솔린 하이브리드 전기,none,none,none,none,none,none
+일본,토요타,Prius,3397,3712,준중형,가솔린 하이브리드,none,none,none,none,none,none
+일본,토요타,Prius Prime,"4,934",,준중형,가솔린 전기 하이브리드,none,none,none,none,none,none
+일본,토요타,Prius C Crossover,"2,590",,소형,가솔린 하이브리드,none,none,none,none,none,none
+일본,토요타,New Camry,3900,4520,중형,가솔린 하이브리드,none,none,none,none,none,none
+일본,토요타,Crown,5810,6940,준대형,가솔린 하이브리드,none,none,none,none,none,none
+일본,토요타,GR 86,4090,4770,스포츠카,가솔린,none,none,none,none,none,none
+일본,토요타,GR Supra,"7,980",,스포츠카,가솔린,none,none,none,none,none,none
+일본,토요타,Highlander,6660,7470,중형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+일본,토요타,New Generation RAV4,4430,5700,중형 SUV,가솔린 하이브리드 전기,none,none,none,none,none,none
+일본,토요타,Sienna,7050,7060,RV/MPV,가솔린 하이브리드,none,none,none,none,none,none
+일본,토요타,Alphard,"9,920",,RV/MPV,가솔린 하이브리드,none,none,none,none,none,none
+일본,렉서스,LC,17460,19240,중형,가솔린 하이브리드,none,none,none,none,none,none
+일본,렉서스,New ES,6360,7410,중형,가솔린 하이브리드,none,none,none,none,none,none
+일본,렉서스,New LS,13383,17830,대형,가솔린 하이브리드,none,none,none,none,none,none
+일본,렉서스,UX,5090,5870,소형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+일본,렉서스,UX 300e,"5,490",,소형 SUV,전기,none,none,none,none,none,none
+일본,렉서스,New Generation NX,6670,8300,소형 SUV,가솔린 하이브리드 전기,none,none,none,none,none,none
+일본,렉서스,NX,5830,6770,소형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+일본,렉서스,New Generation RX,9870,11703,중형 SUV,가솔린 하이브리드 전기,none,none,none,none,none,none
+일본,렉서스,New RX,8120,9760,중형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+일본,렉서스,RZ,8490,9300,중형 SUV,전기,none,none,none,none,none,none
+일본,렉서스,LM,14800,19600,화물,가솔린 하이브리드,none,none,none,none,none,none
+일본,혼다,All New Accord,4390,5340,준대형,가솔린 하이브리드,none,none,none,none,none,none
+일본,혼다,New Accord,3790,4650,준대형,가솔린 하이브리드,none,none,none,none,none,none
+일본,혼다,All New CR-V,4260,5590,중형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+일본,혼다,New CR-V,3900,4850,중형 SUV,가솔린 하이브리드,none,none,none,none,none,none
+일본,혼다,All New Pilot,"6,940",,대형 SUV,가솔린,none,none,none,none,none,none
+일본,혼다,New Pilot,"6,050",,대형 SUV,가솔린,none,none,none,none,none,none
+일본,혼다,New Odyssey,"6,050",,RV/MPV,가솔린,none,none,none,none,none,none
+미국,포드,All New Mustang,5990,8600,스포츠카,가솔린,none,none,none,none,none,none
+미국,포드,New Mustang,5155,7335,스포츠카,가솔린,none,none,none,none,none,none
+미국,포드,Bronco,"8,160",,중형 SUV,가솔린,none,none,none,none,none,none
+미국,포드,All New Explorer,6765,8195,대형 SUV,가솔린 전기 하이브리드,none,none,none,none,none,none
+미국,포드,New Expedition,"11,270",,대형 SUV,가솔린,none,none,none,none,none,none
+미국,포드,Next Generation Ranger,6350,7990,화물,디젤,none,none,none,none,none,none
+미국,링컨,All New Corsair,"5,930",,소형 SUV,가솔린,none,none,none,none,none,none
+미국,링컨,All New Nautilus,"7,740",,대형 SUV,가솔린,none,none,none,none,none,none
+미국,링컨,New Nautilus,"7,470",,대형 SUV,가솔린,none,none,none,none,none,none
+미국,링컨,All New Aviator,9145,10755,대형 SUV,가솔린,none,none,none,none,none,none
+미국,링컨,New Navigator,"15,200",,대형 SUV,가솔린,none,none,none,none,none,none
+미국,지프,Renegade,3810,4840,소형 SUV,가솔린,none,none,none,none,none,none
+미국,지프,The New Wrangler,6970,9990,중형 SUV,가솔린 전기 하이브리드,none,none,none,none,none,none
+미국,지프,All New Wrangler,6990,10130,중형 SUV,가솔린 전기 하이브리드,none,none,none,none,none,none
+미국,지프,All New Grand Cherokee,7690,11190,대형 SUV,가솔린 전기 하이브리드,none,none,none,none,none,none
+미국,지프,All New Grand Cherokee L,8910,9880,대형 SUV,가솔린,none,none,none,none,none,none
+미국,지프,Gladiator,"7,990",,화물,가솔린,none,none,none,none,none,none
+미국,캐딜락,CT4,"4,935",,중형,가솔린,none,none,none,none,none,none
+미국,캐딜락,CT5,5640,14000,대형,가솔린,none,none,none,none,none,none
+미국,캐딜락,New XT4,"6,120",,준중형 SUV,가솔린,none,none,none,none,none,none
+미국,캐딜락,XT4,"5,920",,준중형 SUV,가솔린,none,none,none,none,none,none
+미국,캐딜락,XT5,6910,7710,중형 SUV,가솔린,none,none,none,none,none,none
+미국,캐딜락,Lyriq,"10,696",,중형 SUV,전기,none,none,none,none,none,none
+미국,캐딜락,XT6,8540,8640,대형 SUV,가솔린,none,none,none,none,none,none
+미국,캐딜락,Escalade,15500,16900,대형 SUV,가솔린,none,none,none,none,none,none
+미국,테슬라,Upgraded Model 3,5199,6939,준중형,전기,none,none,none,none,none,none
+미국,테슬라,Model 3,5999,9418,준중형,전기,none,none,none,none,none,none
+미국,테슬라,New Model S,11525,16999,준대형,전기,none,none,none,none,none,none
+미국,테슬라,New Model X,12875,16852,대형 SUV,전기,none,none,none,none,none,none
+미국,테슬라,Model Y,5299,8535,중형 SUV,전기,none,none,none,none,none,none
