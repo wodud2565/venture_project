@@ -1,3 +1,4 @@
+/* 기본 설정 */
 body,
 html {
   margin: 0;
@@ -7,18 +8,16 @@ html {
   font-family: Arial, sans-serif;
   background-color: #f8f8f8;
 }
-/* 헤더 스타일 */
+
+/* 컨테이너 설정 */
 .container {
   display: grid;
   grid-template-rows: auto 1fr 100px;
-  grid-template-columns: 1fr;
   width: 100%;
   height: 100%;
 }
 
-
-/*nav바*/
-
+/* 헤더 스타일 */
 .header {
   background-color: #333;
   padding: 1em 0;
@@ -26,6 +25,13 @@ html {
   top: 0;
   width: 100%;
   z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,13 +72,6 @@ nav ul li a:hover {
   vertical-align: middle;
 }
 
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .nav-left,
 .nav-right {
   display: flex;
@@ -94,17 +93,14 @@ nav {
   margin: 0;
 }
 
-/*nav바*/
-
-
-
+/* 콘텐츠 설정 */
 .content {
   display: grid;
   grid-template-columns: 20vw 1fr 20vw;
   grid-template-rows: 1fr;
   grid-row: 2;
-  grid-column: 1;
 }
+
 .aside-left {
   background-color: blue;
   grid-column: 1;
@@ -112,6 +108,7 @@ nav {
   text-align: center;
   font-size: 20px;
 }
+
 /* AsideLeft */
 .RS {
   position: sticky;
@@ -121,11 +118,13 @@ nav {
   top: 20px;
   margin: 20px;
 }
+
 .RS .box {
   border: 3px solid #ccc;
   align-items: center;
   margin: 5px;
 }
+
 .RS .text {
   display: block;
   width: 200px;
@@ -133,12 +132,14 @@ nav {
   white-space: nowrap;
   overflow: hidden;
 }
-/* AsideLeft */
+
+/* Main 영역 */
 .main {
   background-color: #f8f8f8;
   grid-column: 2;
   grid-row: 1;
 }
+
 .aside-right {
   background-color: red;
   grid-column: 3;
@@ -146,6 +147,8 @@ nav {
   text-align: center;
   font-size: 20px;
 }
+
+/* 푸터 스타일 */
 .footer {
   background-color: violet;
   text-align: center;
@@ -155,28 +158,31 @@ nav {
   text-align: center;
   font-size: 20px;
 }
+
+/* 반응형 설정 */
 @media screen and (max-aspect-ratio: 1/1) {
   .content {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
   }
+
   .main {
     grid-column: 1;
     grid-row: 1;
   }
+
   .aside-left {
     grid-column: 1;
     grid-row: 2;
   }
+
   .aside-right {
     grid-column: 1;
     grid-row: 3;
   }
 }
 
-/* main 영역의 css 시작 */
-/* 기본 설정 */
-
+/* 메인 영역의 CSS 시작 */
 /* 필터 섹션 스타일 */
 .filter-section {
   padding: 1em;
@@ -207,6 +213,7 @@ nav {
 .filter-section button:hover {
   background-color: #555;
 }
+
 /* 카테고리 섹션 스타일 */
 .categories-section {
   display: flex;
@@ -261,7 +268,7 @@ nav {
   transform: scale(1.1);
   border-radius: 6px;
   box-shadow: 0 0 0 1px #0096d2;
-  background-color: #e7f9ff; /* 파란색 배경 */
+  background-color: #e7f9ff;
 }
 
 .brand-card {
@@ -284,10 +291,10 @@ nav {
   color: black;
   font-size: 10px;
   font-weight: bold;
-  display: block; /* 이름이 새로운 줄에 표시되도록 설정 */
-  white-space: nowrap; /* 텍스트가 한 줄에 표시되도록 설정 */
-  overflow: hidden; /* 넘치는 텍스트를 숨기도록 설정 */
-  text-overflow: ellipsis; /* 넘치는 텍스트를 ...으로 요약 */
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* 가격 필터 섹션 스타일 */
@@ -361,6 +368,7 @@ nav {
   background-color: #0096d2;
   color: white;
 }
+
 /* 엔진 유형 필터 섹션 스타일 */
 .engine-filter-section {
   text-align: center;
@@ -433,6 +441,7 @@ nav {
   background-color: #0096d2;
   color: white;
 }
+
 /* 드롭다운 메뉴바 섹션 스타일 */
 .dropdown-section {
   text-align: center;
@@ -469,10 +478,7 @@ nav {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 272px;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0.3em;
-  padding-right: 0.3em;
+  padding: 0 0.3em;
 }
 
 .vehicle-card img {
@@ -484,10 +490,10 @@ nav {
   font-size: 1.5em;
   margin: 0.5em 0;
   text-align: center;
-  display: block; /* 이름이 새로운 줄에 표시되도록 설정 */
-  white-space: nowrap; /* 텍스트가 한 줄에 표시되도록 설정 */
-  overflow: hidden; /* 넘치는 텍스트를 숨기도록 설정 */
-  text-overflow: ellipsis; /* 넘치는 텍스트를 ...으로 요약 */
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .vehicle-card h3 {
@@ -539,7 +545,8 @@ nav {
   margin-bottom: 5px;
   padding: 5px;
 }
-/* 상세보기 찜버튼  */
+
+/* 상세보기 찜버튼 */
 .vehicle-card .button-group {
   display: flex;
   justify-content: space-around;
@@ -562,9 +569,8 @@ nav {
 .like-button:hover {
   background-color: #555;
 }
-/* main 영역의 css 끝*/
 
-/* 상세보기 영역 css 시작 */
+/* 상세보기 영역 CSS 시작 */
 .vehicle-detail {
   display: flex;
   flex-direction: column;
@@ -572,13 +578,23 @@ nav {
   padding: 2em;
   position: relative;
 }
+
+.vehicle-detail-card {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 /* 상세보기 이미지 */
 .vehicle-image-section {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 20px;
-  border-collapse: collapse;
+  padding-top: 30px;
 }
 
 .image-container {
@@ -587,6 +603,7 @@ nav {
   height: auto;
   text-align: center;
 }
+
 .image-container h2 {
   margin: 0;
 }
@@ -595,30 +612,22 @@ nav {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 10px;
-  margin: o;
+  margin: 0;
 }
 
-.release-year {
-  font-size: 1.5em;
-  background-color: #555;
-  width: 10%;
-  min-width: 110px;
-  border-radius: 10px;
-  display: inline-block;
-}
 .top-text {
   width: 100%;
   margin: 0;
   text-align: center;
   box-sizing: border-box;
-  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #292929;
   color: wheat;
+  border-top-left-radius: 10px; /* 텍스트 박스 모서리 둥글게 */
+  border-top-right-radius: 10px; /* 텍스트 박스 모서리 둥글게 */
 }
 
-.bottom-text {
+.middle-text {
   position: absolute;
   bottom: -29px; /* Adjust the value to control the overlap */
   left: 0;
@@ -629,28 +638,54 @@ nav {
   box-sizing: border-box;
 }
 
-.bottom-text .release-year {
+.middle-text .release-year {
+  font-size: 1.5em;
+  background-color: #555;
+  width: 10%;
+  min-width: 110px;
+  border-radius: 10px;
+  display: inline-block;
   margin: 0;
+}
+.bottom-text {
+  position: absolute;
+  bottom: -18rem; /* Adjust the value to control the overlap */
+  left: 25vw;
+  width: 100%;
+  background-color: transparent; /* Semi-transparent background */
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.bottom-text .like-button {
+  padding: 0.5em 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  display: inline-block;
+  margin: 0;
+}
+.bottom-text .like-button:hover {
+  background-color: #555;
 }
 /* 상세보기 스펙 */
 .vehicle-specs {
   margin-bottom: 20px;
   width: 96%;
   padding: 2%;
-  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #292929;
   color: wheat;
-}
-.vehicle-specs h2 {
-  margin-top: 0px;
-}
-.specs div {
-  margin-bottom: 300px;
+  border-bottom-left-radius: 10px; /* 텍스트 박스 모서리 둥글게 */
+  border-bottom-right-radius: 10px; /* 텍스트 박스 모서리 둥글게 */
 }
 
-.spec-item {
-  margin-bottom: 1em;
+.vehicle-specs h2 {
+  margin-top: 0px;
 }
 /* 상세보기 색상 섹션 */
 .vehicle-colors {
@@ -659,6 +694,7 @@ nav {
   margin-bottom: 20px;
   text-align: center;
 }
+
 .vehicle-colors h2 {
   text-align: center;
 }
@@ -673,6 +709,7 @@ nav {
   width: 273px;
   display: block;
 }
+
 .color-box {
   display: flex;
   flex-direction: column;
@@ -682,6 +719,7 @@ nav {
   width: 273px;
   height: 60px;
 }
+
 .color {
   display: flex;
   align-items: center;
@@ -691,14 +729,15 @@ nav {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 .color-name {
   text-align: center;
   font-weight: bold;
-  white-space: nowrap; /* 텍스트가 한 줄에 표시되도록 설정 */
-
-  overflow: hidden; /* 넘치는 텍스트를 숨기도록 설정 */
-  text-overflow: ellipsis; /* 넘치는 텍스트를 ...으로 요약 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
 /* 상세보기 설명 섹션 */
 .vehicle-description {
   margin-top: 2em;
@@ -709,7 +748,6 @@ nav {
   padding-top: 0;
   background-color: #292929;
   color: wheat;
-  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-/* 상세보기 영역 css 끝 */
+/* 상세보기 영역 CSS 끝 */

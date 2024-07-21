@@ -7,7 +7,6 @@ import Footer from '../components/Footer';
 
 /* 임시로 만든 페이지 */
 
-
 const WishlistPage = () => {
   return (
     <div className="container">

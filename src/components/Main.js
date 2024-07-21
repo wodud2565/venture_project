@@ -236,10 +236,6 @@ function Main() {
               <img src={`/images/${vehicle.차량번호}.png`} alt={vehicle.이름} />
               <div className="text-card">
                 <h2>{vehicle.이름}</h2>
-                {/* <div className="info">
-                  <div className="info-label">제조국:</div>
-                  <div className="info-value">{vehicle.제조국}</div>
-                </div> */}
                 <div className="info">
                   <div className="info-label">브랜드:</div>
                   <div className="info-value">{vehicle.브랜드}</div>
