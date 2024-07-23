@@ -237,10 +237,6 @@ function Main() {
               <div className="text-card">
                 <h2>{vehicle.이름}</h2>
                 <div className="info">
-                  <div className="info-label">브랜드:</div>
-                  <div className="info-value">{vehicle.브랜드}</div>
-                </div>
-                <div className="info">
                   <div className="info-label">차종:</div>
                   <div className="info-value">{vehicle.차종}</div>
                 </div>
