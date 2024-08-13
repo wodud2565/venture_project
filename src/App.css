@@ -19,7 +19,7 @@ html {
 
 /* 헤더 스타일 */
 .header {
-  background-color: #333;
+  background-color: #2c3539;
   padding: 1em 0;
   position: fixed;
   top: 0;
@@ -101,47 +101,76 @@ nav ul li a:hover {
   grid-row: 2;
 }
 
+/* AsideLeft */
 .aside-left {
-  background-color: blue;
-  grid-column: 1;
-  grid-row: 1;
+  background-color: #fffff0;
+  padding: 10px;
   text-align: center;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* AsideLeft */
 .RS {
-  position: sticky;
+  width: 80%;
+  max-width: 1200px; /* 최대 너비 제한을 추가하여 큰 화면에서도 보기 좋도록 */
+  background-color: #292929;
+  color: wheat;
   border: 3px solid #ccc;
-  background-color: #f8f8f8;
-  float: right;
-  top: 20px;
-  margin: 20px;
+  padding: 10px;
+  margin-top: 20px;
+  position: sticky;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
 }
 
 .RS .box {
+  width: 100%;
   border: 3px solid #ccc;
-  align-items: center;
   margin: 5px;
+  overflow: hidden; /* 이미지가 박스를 넘지 않도록 숨김 */
+  border-radius: 8px; /* 둥근 모서리로 디자인 개선 */
+}
+
+.RS .box img {
+  width: 100%; /* 부모의 너비를 가득 채우기 */
+  height: auto; /* 이미지 비율 유지 */
+  object-fit: cover; /* 이미지가 박스를 꽉 채우도록 조정 */
+  display: block; /* 이미지 주위의 공간 없애기 */
 }
 
 .RS .text {
   display: block;
-  width: 200px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  width: 100%; /* 전체 너비를 사용 */
+  max-width: 200px; /* 최대 너비 설정 */
+  text-overflow: ellipsis; /* 텍스트 잘림 표시 */
+  white-space: nowrap; /* 한 줄로 표시 */
+  overflow: hidden; /* 오버플로우 숨기기 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  padding: 5px 0; /* 패딩 추가로 텍스트 가독성 개선 */
+}
+
+/* 추천배너  찜버튼 */
+.box .button-group {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1em;
 }
 
 /* Main 영역 */
-.main {
+.main,
+.vehicle-detail {
   background-color: #f8f8f8;
   grid-column: 2;
   grid-row: 1;
 }
 
 .aside-right {
-  background-color: red;
+  background-color: #fffff0;
   grid-column: 3;
   grid-row: 1;
   text-align: center;
@@ -150,7 +179,7 @@ nav ul li a:hover {
 
 /* 푸터 스타일 */
 .footer {
-  background-color: violet;
+  background-color: #8fbc8f;
   text-align: center;
   line-height: 100px;
   grid-row: 3;
@@ -166,7 +195,8 @@ nav ul li a:hover {
     grid-template-rows: 1fr 1fr 1fr;
   }
 
-  .main {
+  .main,
+  .vehicle-detail {
     grid-column: 1;
     grid-row: 1;
   }
@@ -219,26 +249,35 @@ nav ul li a:hover {
   display: flex;
   justify-content: space-around;
   box-sizing: border-box;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* 모바일 화면 스타일 */
+@media (max-width: 768px) {
+  .categories-section {
+    width: 100%;
+  }
 }
 
 .category {
   flex: 1;
   text-align: center;
-  border: 1px solid #ddd;
+  outline: 1px solid #2c3e50;
   margin: 0;
 }
 
 .country-name {
   font-weight: bold;
   margin: 0;
-  background-color: white;
+  background-color: #34495e;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  border-radius: 10px;
+  color: #74e8bd;
 }
 
 .country-divider {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #2c3e50;
   margin: 0;
 }
 
@@ -327,119 +366,140 @@ nav ul li a:hover {
 .price-filter-section button:hover {
   background-color: #555;
 }
-
-/* 차량 유형 필터 섹션 스타일 */
-.type-filter-section {
-  text-align: center;
-  margin: 1em 0;
+/* 전체 필터 섹션을 감싸는 컨테이너 스타일 */
+.spec-filter-section {
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  max-width: 640px;
+  box-sizing: border-box;
 }
 
-.type-category {
-  display: inline-block;
-  margin: 0 1em;
-}
-
-.type-category-name {
-  font-weight: bold;
-  margin-bottom: 0.5em;
-}
-
-.type-grid {
+/* 필터 카테고리와 옵션 정렬을 위한 스타일 */
+.filter-category {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5em;
+  margin-bottom: 0px;
+  padding-bottom: 10px;
 }
 
-.type-button {
-  padding: 0.5em 1em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: white;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.type-button:hover {
-  background-color: #e7f9ff;
-}
-
-.type-button.selected {
-  background-color: #0096d2;
-  color: white;
-}
-
-/* 엔진 유형 필터 섹션 스타일 */
-.engine-filter-section {
+.filter-label {
+  background-color: #e0e0e0; /* 라벨 컬럼에 다른 배경색 적용 */
   text-align: center;
-  margin: 1em 0;
-}
-
-.engine-button {
-  padding: 0.5em 1em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: white;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  margin: 0 0.5em;
-}
-
-.engine-button:hover {
-  background-color: #e7f9ff;
-}
-
-.engine-button.selected {
-  background-color: #0096d2;
-  color: white;
-}
-
-/* 연비, 출력 필터 섹션 스타일 */
-.fuel-efficiency-filter-section,
-.power-filter-section {
-  text-align: center;
-  margin: 1em 0;
-}
-
-.fuel-efficiency-category,
-.power-category {
-  display: inline-block;
-  margin: 0 1em;
-}
-
-.fuel-efficiency-category-name,
-.power-category-name {
-  font-weight: bold;
-  margin-bottom: 0.5em;
-}
-
-.fuel-efficiency-grid,
-.power-grid {
+  min-width: 50px;
+  max-width: 45px;
+  min-height: 40px;
+  max-height: 40px;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 1rem;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5em;
+  justify-content: center; /* 좌우 중앙 정렬 */
+  align-items: center; /* 상하 중앙 정렬 */
+  border-radius: 5px;
 }
 
+.filter-options {
+  display: grid; /* 그리드 레이아웃으로 변경 */
+  grid-template-columns: repeat(5, 1fr); /* 5열로 균등 분할 */
+  gap: 0.5em; /* 버튼 사이 간격 설정 */
+  width: 100%; /* 전체 너비 사용 */
+  padding-left: 5px;
+  box-sizing: border-box; /* 박스 크기를 포함하여 계산 */
+}
+
+.type-button,
+.engine-button,
 .fuel-efficiency-button,
 .power-button {
-  padding: 0.5em 1em;
+  width: 100%; /* 버튼이 그리드 셀을 가득 채우도록 설정 */
+  padding: 0.5em;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: white;
   cursor: pointer;
   transition: background-color 0.2s;
+  font-size: 0.9rem;
+  text-align: center;
+  box-sizing: border-box;
 }
 
+.type-button:hover,
+.engine-button:hover,
 .fuel-efficiency-button:hover,
 .power-button:hover {
   background-color: #e7f9ff;
 }
 
+.type-button.selected,
+.engine-button.selected,
 .fuel-efficiency-button.selected,
 .power-button.selected {
   background-color: #0096d2;
   color: white;
+}
+
+.toggle-expand-button {
+  grid-column: 1 / -1; /* Span across all columns */
+  justify-self: center; /* Center the button within the grid cell */
+  margin-top: 10px;
+  padding: 0.5em 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: auto; /* Adjust width to fit content */
+}
+
+.toggle-expand-button:hover {
+  background-color: #e7f9ff;
+}
+
+/* 반응형 웹 디자인을 위한 미디어 쿼리 */
+@media (max-width: 1024px) {
+  .spec-filter-section {
+    max-width: 100%;
+  }
+
+  .filter-label {
+    font-size: 14px;
+    padding: 8px;
+    min-width: 70px;
+  }
+
+  .filter-options {
+    gap: 0.3em; /* 중간 화면에서 버튼 사이 간격 줄이기 */
+  }
+}
+
+@media (max-width: 768px) {
+  .spec-filter-section {
+    max-width: 100%;
+    padding: 5px;
+  }
+
+  .filter-label {
+    width: 100%;
+    text-align: left;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    min-width: 0px;
+  }
+
+  .filter-options {
+    width: 100%;
+  }
+
+  .type-button,
+  .engine-button,
+  .fuel-efficiency-button,
+  .power-button {
+    font-size: 1rem;
+    padding: 0.4em 0;
+  }
 }
 
 /* 드롭다운 메뉴바 섹션 스타일 */
@@ -505,7 +565,7 @@ nav ul li a:hover {
 .vehicle-card .info {
   display: flex;
   justify-content: center;
-  margin: 0.1em 0;
+  margin: 0.1em 0.2em;
 }
 
 .vehicle-card .info-label {
@@ -518,6 +578,7 @@ nav ul li a:hover {
   flex: 0.5;
   text-align: right;
   font-weight: bold;
+  color: #808080;
   white-space: nowrap;
 }
 
@@ -640,7 +701,8 @@ nav ul li a:hover {
 
 .middle-text .release-year {
   font-size: 1.5em;
-  background-color: #555;
+  background-color: #434343;
+  color: #ffe4e1;
   width: 10%;
   min-width: 110px;
   border-radius: 10px;
@@ -650,10 +712,10 @@ nav ul li a:hover {
 .bottom-text {
   position: absolute;
   bottom: -18rem; /* Adjust the value to control the overlap */
-  left: 25vw;
   width: 100%;
   background-color: transparent; /* Semi-transparent background */
-  text-align: center;
+  text-align: right;
+  text-align: bottom;
   padding: 10px;
   box-sizing: border-box;
 }
@@ -751,3 +813,14 @@ nav ul li a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 /* 상세보기 영역 CSS 끝 */
+
+/* 숫자 입력 버튼 수정*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

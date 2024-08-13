@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const VehicleDetail = ({ vehicle, onBack }) => {
   const renderColors = () => {
@@ -16,9 +16,6 @@ const VehicleDetail = ({ vehicle, onBack }) => {
 
   return (
     <div className="vehicle-detail">
-      <button className="detail-button" onClick={onBack}>
-        뒤로 가기
-      </button>
       <div className="vehicle-image-section">
         <div className="image-container">
           <div className="top-text">

@@ -1,19 +1,19 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // 네비게이션바 { 왼쪽에 홈버튼, 오른쪽에 3개( 로그인 로그아웃 찜목록 버튼)}
 const Header = () => {
   useEffect(() => {
-    const header = document.querySelector('.header');
+    const header = document.querySelector(".header");
     const setMarginTop = () => {
       document.body.style.marginTop = `${header.offsetHeight}px`;
     };
     setMarginTop();
 
-    window.addEventListener('resize', setMarginTop);
+    window.addEventListener("resize", setMarginTop);
 
     return () => {
-      window.removeEventListener('resize', setMarginTop);
+      window.removeEventListener("resize", setMarginTop);
     };
   }, []);
 
@@ -31,6 +31,11 @@ const Header = () => {
           <h1>Finding Car</h1>
         </div>
         <ul className="nav-right">
+          <li>
+            <Link to="/login">
+              <img src="/icons/login.png" alt="Login" className="icon" />
+            </Link>
+          </li>
           <li>
             <Link to="/login">
               <img src="/icons/login.png" alt="Login" className="icon" />
