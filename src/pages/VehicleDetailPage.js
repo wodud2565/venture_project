@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import axios from "axios"; // axios 임포트
 import Header from "../components/Header";
 import VehicleDetail from "../components/VehicleDetail";
 import AsideLeft from "../components/AsideLeft";
@@ -13,9 +14,9 @@ const VehicleDetailPage = () => {
   useEffect(() => {
     const fetchVehicle = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/api/vehicles/${vehicleId}`);
-        const data = await response.json();
-        setVehicle(data);
+        // axios를 사용하여 GET 요청
+        const response = await axios.get(`http://localhost:3001/api/vehicles/${vehicleId}`);
+        setVehicle(response.data); // 응답 데이터 설정
       } catch (error) {
         console.error("Error fetching vehicle data:", error);
       }
