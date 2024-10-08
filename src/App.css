@@ -105,14 +105,14 @@ nav ul li a:hover {
 
 /* 추천배너 영역 시작*/
 .aside-left {
-  background-color: #fffff0;
+  background-color: #f8f8f8;
   padding: 10px;
   text-align: center;
   font-size: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-right: 1px solid #e0e0e0; /* 왼쪽에만 1px 테두리 */
+  border-right: 1px solid #e0e0e0; /* 오른쪽에만 1px 테두리 */
 }
 
 .LS {
