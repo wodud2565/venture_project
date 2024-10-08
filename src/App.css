@@ -224,7 +224,8 @@ nav ul li a:hover {
   height: 20px;
   width: auto; /* 너비 자동 설정 */
   padding: 0 10px;
-  display: inline-block;
+  align-items: center;
+  display: flex;
 }
 
 .cb-t1,
