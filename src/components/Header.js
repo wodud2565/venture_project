@@ -46,6 +46,11 @@ const Header = () => {
               <img src="/icons/wishlist.png" alt="Wishlist" className="icon" />
             </Link>
           </li>
+          <li>
+            <Link to="/postlist">
+              <img src="/icons/wishlist.png" alt="Postlist" className="icon" />
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>

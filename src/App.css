@@ -101,19 +101,19 @@ nav ul li a:hover {
   grid-template-rows: 1fr;
   grid-row: 2;
 }
-
-/* AsideLeft */
+/* 추천배너 영역 시작*/
 .aside-left {
-  background-color: #fffff0;
+  background-color: #f8f8f8;
   padding: 10px;
   text-align: center;
   font-size: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-right: 1px solid #e0e0e0; /* 왼쪽에만 1px 테두리 */
 }
 
-.RS {
+.LS {
   width: 80%;
   max-width: 1200px; /* 최대 너비 제한을 추가하여 큰 화면에서도 보기 좋도록 */
   background-color: #292929;
@@ -126,10 +126,11 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
 }
 
-.RS .box {
+.LS .box {
   width: 100%;
   border: 3px solid #ccc;
   margin: 5px;
@@ -137,14 +138,14 @@ nav ul li a:hover {
   border-radius: 8px; /* 둥근 모서리로 디자인 개선 */
 }
 
-.RS .box img {
+.LS .box img {
   width: 100%; /* 부모의 너비를 가득 채우기 */
   height: auto; /* 이미지 비율 유지 */
   object-fit: cover; /* 이미지가 박스를 꽉 채우도록 조정 */
   display: block; /* 이미지 주위의 공간 없애기 */
 }
 
-.RS .text {
+.LS .text {
   display: block;
   width: 100%; /* 전체 너비를 사용 */
   max-width: 200px; /* 최대 너비 설정 */
@@ -162,6 +163,99 @@ nav ul li a:hover {
   margin-top: 1em;
 }
 
+/* 추천배너 영역 끝*/
+
+/* 챗봇 영역 시작 */
+.aside-right {
+  background-color: #f8f8f8;
+  grid-column: 3;
+  grid-row: 1;
+  text-align: center;
+  font-size: 20px;
+  border-left: 1px solid #e0e0e0; /* 왼쪽에만 1px 테두리 */
+}
+
+.RS {
+  width: 80%;
+  height: 600px;
+  max-width: 1200px;
+  border: 5px solid #e0e0e0;
+  margin: 70px auto;
+  position: sticky;
+  top: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.5);
+  padding: 14px 16px 40px 16px;
+  border-radius: 40px;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.chatbot-icon {
+  margin-top: 50px;
+  width: 100px; /* 이미지의 크기를 명시적으로 설정 */
+  height: auto; /* 이미지 비율을 유지하며 크기 조정 */
+}
+
+.wifi {
+  width: 70px; /* 적절한 크기로 이미지 조정 */
+  height: auto;
+}
+
+.chatbot-top {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 40px;
+  text-align: left;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  border-radius: 28px 28px 0 0;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.chatbot-bottom {
+  height: 20px;
+  width: auto; /* 너비 자동 설정 */
+  padding: 0 10px;
+  align-items: center;
+  display: flex;
+}
+
+.cb-t1,
+.cb-t2,
+.cb-t3 {
+  background-color: #f5f5f5;
+  text-align: center;
+  min-width: 50px;
+  max-width: 450px;
+  min-height: 40px;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.cb-t3 {
+  margin-top: 50px;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.time {
+  font-size: 16px;
+}
+/* 챗봇 영역 끝 */
+
 /* Main 영역 */
 .main,
 .vehicle-detail {
@@ -170,23 +264,34 @@ nav ul li a:hover {
   grid-row: 1;
 }
 
-.aside-right {
-  background-color: #fffff0;
-  grid-column: 3;
-  grid-row: 1;
-  text-align: center;
-  font-size: 20px;
-}
-
 /* 푸터 스타일 */
 .footer {
-  background-color: #8fbc8f;
+  background-color: #2c3539;
+  color: whitesmoke;
   text-align: center;
-  line-height: 100px;
   grid-row: 3;
   grid-column: 1;
   text-align: center;
-  font-size: 20px;
+  height: 100px; /* 명확한 높이 설정 */
+  display: flex; /* 중앙 정렬을 위한 flexbox 사용 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+}
+
+.footer-button {
+  background-color: inherit; /* 배경 상속 */
+  color: inherit; /* 글자 색상 상속 */
+  border: none; /* 버튼 테두리 제거 */
+  width: 100%; /* 버튼의 너비를 부모 요소에 맞게 설정 */
+  padding: 10px; /* 버튼 내 패딩 추가 */
+  cursor: pointer; /* 커서 변경 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  font-size: 30px;
+  height: 100%; /* 버튼이 푸터의 전체 높이를 차지하게 설정 */
+}
+
+.footer-button:hover {
+  background-color: #555;
 }
 
 /* 반응형 설정 */
@@ -780,7 +885,8 @@ nav ul li a:hover {
 
 .middle-text .release-year {
   font-size: 1.5em;
-  background-color: #434343;
+  background-color: transparent;
+  border: 1px solid #ccc;
   color: #ffe4e1;
   width: 10%;
   min-width: 110px;
@@ -902,4 +1008,29 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+/* quill css */
+.ql-editor {
+  background-color: white;
+  height: 600px;
+  border-radius: 00 15px 15px;
+}
+
+.ql-toolbar {
+  border-radius: 15px 15px 0 0;
+  background-color: white;
+}
+
+.ql-container.ql-snow {
+  height: 601px;
+  border-radius: 00 15px 15px;
+}
+
+.ql-toolbar.ql-snow {
+  margin-bottom: 0px;
+}
+
+.ql-fill {
+  color: #fff !important;
 }

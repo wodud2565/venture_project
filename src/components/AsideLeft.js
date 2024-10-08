@@ -3,7 +3,7 @@ import React from "react";
 const AsideLeft = () => {
   return (
     <div className="aside-left">
-      <div className="RS">
+      <div className="LS">
         황재영님의 추천시스템
         <div className="box">
           <img src={`/images/1112.png`} alt="이미지오류" />
