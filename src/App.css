@@ -124,7 +124,7 @@ nav ul li a:hover {
   padding: 10px;
   margin-top: 20px;
   position: sticky;
-  top: 70px;
+  top: 71px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,7 +183,7 @@ nav ul li a:hover {
   border: 5px solid #e0e0e0;
   margin: 70px auto;
   position: sticky;
-  top: 64px;
+  top: 71px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1197,6 +1197,8 @@ nav ul li a:hover {
 
 /*로그인, 회원가입 페이지 끝*/
 
+/* 나중에 게시판 css 붙일 곳 */
+
 /* 숫자 입력 버튼 수정*/
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -1207,3 +1209,60 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+/* 햄버거 버튼 시작*/
+
+/* 메뉴 버튼 스타일 */
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.menu-button:hover {
+  background-color: #555; /* Hover 시 색상 */
+}
+
+/* 메뉴 리스트 컨테이너 스타일 */
+
+.menu-list-container {
+  position: absolute;
+  top: 100%; /* 헤더 아래에 위치 */
+  left: 0;
+  width: 100%; /* 화면 전체 너비 차지 */
+  background-color: #404547; /* 파란색 배경 */
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999; /* 헤더보다 높은 z-index */
+}
+
+/* 메뉴 리스트 스타일 */
+.menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* 메뉴 항목 중앙 정렬 */
+  flex-wrap: wrap; /* 항목들이 화면 크기에 맞게 줄바꿈 */
+}
+
+.menu-list li {
+  margin: 10px 20px;
+  text-align: center;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  display: block;
+  padding: 10px 20px;
+  background-color: #555; /* 메뉴 항목 배경색 */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-list a:hover {
+  background-color: #666; /* Hover 시 색상 */
+}
+
+/* 햄버거 버튼 끝*/
