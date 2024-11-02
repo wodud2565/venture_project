@@ -1,144 +1,223 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useNavigate } from "react-router-dom"; // useNavigate 훅 임포트
+import { useDispatch, useSelector } from "react-redux";
 import { auth, db } from "../firebase";
-import { doc, getDoc, updateDoc, arrayRemove, arrayUnion } from "firebase/firestore";
-import axios from "axios";
+import { doc, getDoc } from "firebase/firestore";
+import { fetchRecommendations, fetchVehicleDetails, updateUserWishlist, updateViewedVehicles, setWishlist, setViewedVehicles } from "../redux/vehicleSlice";
 
 const AsideLeft = () => {
-  const [vehicles, setVehicles] = useState([]); // 추천 차량 목록을 저장하는 상태입니다.
-  const [loading, setLoading] = useState(true); // 데이터 로딩 상태를 관리합니다.
+  // Firebase 인증 상태 관리
   const [user] = useAuthState(auth); // 현재 로그인된 사용자 정보를 가져옵니다.
   const [userName, setUserName] = useState(""); // 사용자의 이름을 저장합니다.
-  const [wishlist, setWishlist] = useState([]); // 사용자의 찜 목록을 저장합니다.
-  const navigate = useNavigate(); // 페이지 이동을 위한 useNavigate 훅을 사용합니다.
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
+  // 로컬 상태 관리
+  const [localWishlist, setLocalWishlist] = useState([]);
+  const [displayedVehicles, setDisplayedVehicles] = useState([]);
+
+  // Redux 상태 가져오기
+  const { vehicleDetails: vehicles, wishlist, viewedVehicles, isLoading: isInitialLoading, isUpdating, error, recommendedVehicles: rawRecommendations } = useSelector((state) => state.vehicles);
+
+  // 사용자 데이터 가져오기
   useEffect(() => {
-    // 사용자 데이터를 가져오는 함수입니다.
     const fetchUserData = async () => {
       if (!user) return;
 
       try {
-        // Firebase Firestore에서 사용자 데이터를 가져옵니다.
         const userRef = doc(db, "Users", user.uid);
         const userDoc = await getDoc(userRef);
         if (!userDoc.exists()) return;
-
         const userData = userDoc.data();
         const firstName = userData.firstName || "이름없음";
         const lastName = userData.lastName || "";
         setUserName(`${firstName}${lastName}`.trim());
-
-        const wishlist = userData.wishlist || [];
-        setWishlist(wishlist);
-
-        // 사용자가 찜한 차량과 최근 본 차량을 합칩니다.
-        const viewedVehicles = userData.viewedVehicles || [];
-        const allVehicles = [...wishlist, ...viewedVehicles];
-
-        // 각 차량의 출현 횟수를 계산합니다.
-        const vehicleCounts = allVehicles.reduce((acc, vehicleId) => {
-          acc[vehicleId] = (acc[vehicleId] || 0) + 1;
-          return acc;
-        }, {});
-
-        // 차량 출현 횟수에 따라 정렬된 차량 ID 목록을 가져옵니다.
-        const sortedVehicleIds = Object.keys(vehicleCounts).sort((a, b) => vehicleCounts[b] - vehicleCounts[a]);
-
-        // 상위 3개의 차량 ID를 가져옵니다.
-        const topVehicleIds = sortedVehicleIds.slice(0, 3);
-
-        // 차량 데이터를 가져옵니다.
-        const vehiclePromises = topVehicleIds.map((vehicleId) => axios.get(`https://us-central1-findingcar-12d9d.cloudfunctions.net/MyApi/api/vehicles/${vehicleId}`).then((res) => res.data));
-
-        const vehiclesData = await Promise.all(vehiclePromises);
-        setVehicles(vehiclesData); // 가져온 차량 데이터를 상태에 저장합니다.
-        setLoading(false); // 로딩 상태를 false로 설정합니다.
+        dispatch(setWishlist(userData.wishlist || []));
+        dispatch(setViewedVehicles(userData.viewedVehicles || []));
       } catch (error) {
-        console.error("Error fetching recommended vehicles:", error); // 에러 발생 시 콘솔에 로그를 남깁니다.
-        setLoading(false); // 에러 발생 시에도 로딩을 중단합니다.
+        console.error("Firebase에서 사용자 데이터를 가져오는 중 오류 발생:", error);
       }
     };
 
     fetchUserData();
-  }, [user]);
+  }, [user, dispatch]);
 
-  // 상세 페이지로 이동하면서 최근 본 차량 목록에 추가합니다.
+  // 위시리스트 상태 동기화
+  useEffect(() => {
+    setLocalWishlist(wishlist);
+  }, [wishlist]);
+
+  // 추천 데이터 가져오기
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        if (user) {
+          const allVehicles = [...new Set([...wishlist, ...viewedVehicles])];
+          await dispatch(
+            fetchRecommendations({
+              userVehicleIds: allVehicles,
+              isRandom: false,
+            })
+          ).unwrap();
+        } else {
+          await dispatch(
+            fetchRecommendations({
+              isRandom: true,
+            })
+          ).unwrap();
+        }
+      } catch (error) {
+        console.error("데이터를 가져오는 중 오류 발생:", error);
+      }
+    };
+
+    fetchData();
+  }, [dispatch, user, wishlist, viewedVehicles]);
+
+  // 추천 차량 상세 정보 가져오기
+  useEffect(() => {
+    const updateDisplayedVehicles = async () => {
+      if (rawRecommendations.length > 0) {
+        const fetchedVehicles = await dispatch(fetchVehicleDetails(rawRecommendations)).unwrap();
+        setDisplayedVehicles(fetchedVehicles);
+      }
+    };
+
+    updateDisplayedVehicles();
+  }, [dispatch, rawRecommendations]);
+
+  // 차량 상세 페이지로 이동 및 조회 기록 업데이트
   const handleDetailClick = async (vehicle) => {
-    if (user) {
-      const userRef = doc(db, "Users", user.uid);
-      await updateDoc(userRef, {
-        viewedVehicles: arrayUnion(vehicle.차량번호),
-      });
-    }
-    // 차량 상세 페이지로 이동합니다.
     navigate(`/vehicle/${vehicle.차량번호}`);
+    if (user) {
+      try {
+        await dispatch(
+          updateViewedVehicles({
+            userId: user.uid,
+            vehicleId: vehicle.차량번호,
+          })
+        ).unwrap();
+
+        const allVehicles = [...new Set([...localWishlist, ...viewedVehicles, vehicle.차량번호])];
+        await dispatch(
+          fetchRecommendations({
+            userVehicleIds: allVehicles,
+            isRandom: false,
+          })
+        ).unwrap();
+      } catch (error) {
+        console.error("조회 기록 업데이트 중 오류 발생:", error);
+      }
+    }
   };
 
-  // 차량을 찜 목록에 추가하는 함수입니다.
+  // 위시리스트에 차량 추가
   const handleAddToWishlist = async (vehicleId) => {
-    if (user) {
-      try {
-        const userRef = doc(db, "Users", user.uid);
-        await updateDoc(userRef, {
-          wishlist: arrayUnion(vehicleId),
-        });
-        setWishlist((prevWishlist) => [...prevWishlist, vehicleId]); // 찜 목록 상태를 업데이트합니다.
-        alert("찜목록에 추가되었습니다.");
-      } catch (error) {
-        console.error("Error adding to wishlist:", error); // 에러 발생 시 콘솔에 로그를 남깁니다.
-      }
-    } else {
-      alert("로그인이 필요합니다.");
+    if (!user) {
+      alert("로그인이 필요한 기능입니다.");
+      return;
+    }
+    try {
+      await dispatch(
+        updateUserWishlist({
+          userId: user.uid,
+          vehicleId,
+          action: "add",
+        })
+      ).unwrap();
+
+      const updatedWishlist = [...localWishlist, vehicleId];
+      setLocalWishlist(updatedWishlist);
+
+      const allVehicles = [...new Set([...updatedWishlist, ...viewedVehicles])];
+      const newRecommendations = await dispatch(
+        fetchRecommendations({
+          userVehicleIds: allVehicles,
+          isRandom: false,
+        })
+      ).unwrap();
+
+      const newVehicles = await dispatch(fetchVehicleDetails(newRecommendations)).unwrap();
+      setDisplayedVehicles(newVehicles);
+    } catch (error) {
+      console.error("위시리스트 추가 중 오류 발생:", error);
     }
   };
 
-  // 차량을 찜 목록에서 제거하는 함수입니다.
+  // 위시리스트에서 차량 제거
   const handleRemoveFromWishlist = async (vehicleId) => {
-    if (user) {
-      try {
-        const userRef = doc(db, "Users", user.uid);
-        await updateDoc(userRef, {
-          wishlist: arrayRemove(vehicleId),
-        });
-        setWishlist((prevWishlist) => prevWishlist.filter((id) => id !== vehicleId)); // 찜 목록 상태를 업데이트합니다.
-        alert("찜목록에서 제거되었습니다.");
-      } catch (error) {
-        console.error("Error removing from wishlist:", error); // 에러 발생 시 콘솔에 로그를 남깁니다.
-        alert("찜목록에서 제거하는데 실패했습니다.");
-      }
-    } else {
-      alert("로그인이 필요합니다.");
+    try {
+      await dispatch(
+        updateUserWishlist({
+          userId: user.uid,
+          vehicleId,
+          action: "remove",
+        })
+      ).unwrap();
+
+      const updatedWishlist = localWishlist.filter((id) => id !== vehicleId);
+      setLocalWishlist(updatedWishlist);
+
+      const allVehicles = [...new Set([...updatedWishlist, ...viewedVehicles])];
+      const newRecommendations = await dispatch(
+        fetchRecommendations({
+          userVehicleIds: allVehicles,
+          isRandom: false,
+        })
+      ).unwrap();
+
+      const newVehicles = await dispatch(fetchVehicleDetails(newRecommendations)).unwrap();
+      setDisplayedVehicles(newVehicles);
+    } catch (error) {
+      console.error("위시리스트 제거 중 오류 발생:", error);
     }
   };
 
+  // 컴포넌트 렌더링
   return (
     <div className="aside-left">
       <div className="LS">
-        {userName}님의 추천 시스템
-        {loading ? (
-          <p>로딩 중...</p>
+        <h2 className="title">
+          {user ? (
+            <>
+              {userName || "사용자"} 님의
+              <br />
+              맞춤 추천 차량
+            </>
+          ) : (
+            "랜덤 추천 시스템"
+          )}
+        </h2>{" "}
+        {isInitialLoading ? (
+          <p>초기 데이터를 불러오는 중...</p>
+        ) : error ? (
+          <p className="error">{error}</p>
         ) : (
-          vehicles.map((vehicle) => (
-            <div key={vehicle.차량번호} className="box">
-              <img src={`/images/${vehicle.차량번호}.png`} alt={vehicle.이름} />
-              <div>{vehicle.이름}</div>
-              <div className="button-group">
-                <button className="detail-button" onClick={() => handleDetailClick(vehicle)}>
-                  상세 보기
-                </button>
-                {wishlist.includes(vehicle.차량번호) ? (
-                  <button className="like-button" onClick={() => handleRemoveFromWishlist(vehicle.차량번호)}>
-                    찜해제
+          <>
+            {isUpdating && <p>추천 목록을 업데이트하는 중...</p>}
+            {displayedVehicles.map((vehicle) => (
+              <div key={vehicle.차량번호} className="box">
+                <img src={`/images/${vehicle.차량번호}.png`} alt={vehicle.이름} />
+                <div>{vehicle.이름}</div>
+                <div className="button-group">
+                  <button className="detail-button" onClick={() => handleDetailClick(vehicle)}>
+                    상세 보기
                   </button>
-                ) : (
-                  <button className="like-button" onClick={() => handleAddToWishlist(vehicle.차량번호)}>
-                    찜하기
-                  </button>
-                )}
+                  {user &&
+                    (localWishlist.includes(vehicle.차량번호) ? (
+                      <button className="like-button" onClick={() => handleRemoveFromWishlist(vehicle.차량번호)}>
+                        찜해제
+                      </button>
+                    ) : (
+                      <button className="like-button" onClick={() => handleAddToWishlist(vehicle.차량번호)}>
+                        찜하기
+                      </button>
+                    ))}
+                </div>
               </div>
-            </div>
-          ))
+            ))}
+          </>
         )}
       </div>
     </div>

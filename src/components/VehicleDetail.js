@@ -1,42 +1,42 @@
 import React, { useState, useEffect } from "react";
-import { doc, updateDoc, arrayUnion, arrayRemove, getDoc } from "firebase/firestore";
-import { db, auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useDispatch, useSelector } from "react-redux";
+import { auth } from "../firebase";
+import { updateUserWishlist } from "../redux/vehicleSlice";
 
 const VehicleDetail = ({ vehicle }) => {
-  // 찜 목록 상태를 관리합니다.
-  const [wishlist, setWishlist] = useState([]);
-
-  // 현재 로그인한 사용자를 가져옵니다.
   const [user] = useAuthState(auth);
+  const dispatch = useDispatch();
 
-  // 컴포넌트가 마운트될 때 사용자 데이터를 가져옵니다.
+  // Redux에서 위시리스트 상태를 가져옵니다
+  const globalWishlist = useSelector((state) => state.vehicles.wishlist);
+
+  // 로컬 위시리스트 상태를 관리합니다
+  const [localWishlist, setLocalWishlist] = useState(globalWishlist);
+
+  // globalWishlist가 변경될 때 localWishlist를 업데이트합니다
   useEffect(() => {
-    const fetchWishlist = async () => {
-      if (user) {
-        const userRef = doc(db, "Users", user.uid);
-        const userDoc = await getDoc(userRef);
-
-        // 사용자 데이터가 존재하면 찜 목록을 설정합니다.
-        if (userDoc.exists()) {
-          const userData = userDoc.data();
-          setWishlist(userData.wishlist || []);
-        }
-      }
-    };
-
-    fetchWishlist();
-  }, [user]);
+    setLocalWishlist(globalWishlist);
+  }, [globalWishlist]);
 
   // 차량을 찜 목록에 추가하는 함수입니다.
   const handleAddToWishlist = async (vehicleId) => {
     if (user) {
-      const userRef = doc(db, "Users", user.uid);
-      await updateDoc(userRef, {
-        wishlist: arrayUnion(vehicleId),
-      });
-      setWishlist([...wishlist, vehicleId]); // 상태에 추가된 차량을 반영합니다.
-      alert("찜목록에 추가되었습니다.");
+      try {
+        await dispatch(
+          updateUserWishlist({
+            userId: user.uid,
+            vehicleId,
+            action: "add",
+          })
+        ).unwrap();
+        // 로컬 상태 즉시 업데이트
+        setLocalWishlist((prev) => [...prev, vehicleId]);
+        alert("찜목록에 추가되었습니다.");
+      } catch (error) {
+        console.error("Error adding to wishlist:", error);
+        alert("찜하기에 실패했습니다.");
+      }
     } else {
       alert("로그인이 필요합니다.");
     }
@@ -45,12 +45,21 @@ const VehicleDetail = ({ vehicle }) => {
   // 차량을 찜 목록에서 제거하는 함수입니다.
   const handleRemoveFromWishlist = async (vehicleId) => {
     if (user) {
-      const userRef = doc(db, "Users", user.uid);
-      await updateDoc(userRef, {
-        wishlist: arrayRemove(vehicleId),
-      });
-      setWishlist(wishlist.filter((id) => id !== vehicleId)); // 상태에서 제거된 차량을 반영합니다.
-      alert("찜목록에서 제거되었습니다.");
+      try {
+        await dispatch(
+          updateUserWishlist({
+            userId: user.uid,
+            vehicleId,
+            action: "remove",
+          })
+        ).unwrap();
+        // 로컬 상태 즉시 업데이트
+        setLocalWishlist((prev) => prev.filter((id) => id !== vehicleId));
+        alert("찜목록에서 제거되었습니다.");
+      } catch (error) {
+        console.error("Error removing from wishlist:", error);
+        alert("찜해제에 실패했습니다.");
+      }
     } else {
       alert("로그인이 필요합니다.");
     }
@@ -82,7 +91,7 @@ const VehicleDetail = ({ vehicle }) => {
             <div className="release-year">{`${vehicle.출시년도}년형`}</div>
           </div>
           <div className="bottom-text">
-            {wishlist.includes(vehicle.차량번호) ? (
+            {localWishlist.includes(vehicle.차량번호) ? (
               <button className="like-button" onClick={() => handleRemoveFromWishlist(vehicle.차량번호)}>
                 찜해제
               </button>

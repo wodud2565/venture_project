@@ -29,7 +29,8 @@ function Signup() {
           email: user.email,
           firstName: fname,
           lastName: lname,
-          photo: "", // 초기 프로필 사진을 빈 문자열로 설정
+          viewedVehicles: [],
+          wishlist: [],
         });
 
         console.log("회원 가입 완료!!");
