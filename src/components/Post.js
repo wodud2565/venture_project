@@ -7,13 +7,11 @@ import styles from "./Post.module.css";
 // 게시글 데이터를 가져오는 함수
 const getPost = async (postId, setPost) => {
   try {
-    const response = await fetch(
-      `http://localhost:3001/api/post?postId=${postId}`,
-      {
-        method: "GET",
-        credentials: "include",
-      }
-    );
+    const response = await fetch(`http://localhost:3001/api/post?postId=${postId}`, {
+      method: "GET",
+      credentials: "include",
+      cache: "no-store",
+    });
     if (!response.ok) {
       throw new Error("Failed to fetch post");
     }
@@ -26,9 +24,7 @@ const getPost = async (postId, setPost) => {
 // 게시글의 댓글 데이터를 가져오는 함수
 const getComments = async (postId, setComments) => {
   try {
-    const response = await fetch(
-      `http://localhost:3001/api/getComments?postId=${postId}`
-    );
+    const response = await fetch(`http://localhost:3001/api/getComments?postId=${postId}`);
     if (!response.ok) {
       throw new Error("Failed to fetch Comments");
     }
@@ -49,7 +45,7 @@ const Post = () => {
   // if(user){
   //   let email = user.email;
   // }
-  let email = "email";
+  let email = "find@gmail.com";
   const { postId } = useParams(); // URL에서 postId를 가져옴
   const [post, setPost] = useState(null);
   const [comments, setComments] = useState([]);
@@ -62,13 +58,7 @@ const Post = () => {
 
   // 대댓글 여닫기 값 변경
   const handleToggleReplyInput = (commentId) => {
-    setComments((prevComments) =>
-      prevComments.map((comment) =>
-        comment.id === commentId
-          ? { ...comment, showReplyInput: !comment.showReplyInput }
-          : comment
-      )
-    );
+    setComments((prevComments) => prevComments.map((comment) => (comment.id === commentId ? { ...comment, showReplyInput: !comment.showReplyInput } : comment)));
   };
 
   // 작성일 변경
@@ -157,10 +147,7 @@ const Post = () => {
           </div>
         </div>
 
-        <div
-          className={styles.content}
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+        <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.content }} />
         <div className={styles.likeAndEdit}>
           <div></div>
           <button>좋아요👍</button>
@@ -175,40 +162,27 @@ const Post = () => {
                 <div className={styles.commentHeader}>
                   <div className={styles.commentMeta}>
                     <span className={styles.author}>{maskEmail(comment.author)}</span>
-                    <span className={styles.date}>
-                      {formatDate(comment.created_at)}
-                    </span>
+                    <span className={styles.date}>{formatDate(comment.created_at)}</span>
                     <span className={styles.edited}>{comment.is_edited}</span>
                   </div>
                   <div className={styles.likeContainer}>
                     {comment.showReplyInput ? (
-                      <button
-                        onClick={() => handleToggleReplyInput(comment.id)}
-                        className={styles.likeAndReplyButton}
-                      >
+                      <button onClick={() => handleToggleReplyInput(comment.id)} className={styles.likeAndReplyButton}>
                         닫기
                       </button>
                     ) : (
-                      <button
-                        onClick={() => handleToggleReplyInput(comment.id)}
-                        className={styles.likeAndReplyButton}
-                      >
+                      <button onClick={() => handleToggleReplyInput(comment.id)} className={styles.likeAndReplyButton}>
                         댓글
                       </button>
                     )}
-                    <button className={styles.likeAndReplyButton}>
-                      좋아요👍({comment.like_count})
-                    </button>
+                    <button className={styles.likeAndReplyButton}>좋아요👍({comment.like_count})</button>
                   </div>
                 </div>
                 <div className={styles.content}>{comment.content}</div>
                 {/* 대댓글 */}
                 {comment.showReplyInput ? (
                   <div className={styles.commentInput}>
-                    <form
-                      className={styles.commentInputForm}
-                      onSubmit={(e) => handleCommentSubmit(e, comment.id)}
-                    >
+                    <form className={styles.commentInputForm} onSubmit={(e) => handleCommentSubmit(e, comment.id)}>
                       <textarea
                         value={commentContent[comment.id] || ""}
                         onChange={(e) =>
@@ -235,15 +209,11 @@ const Post = () => {
                     <div className={styles.commentHeader}>
                       <div className={styles.commentMeta}>
                         <span className={styles.author}>{maskEmail(reply.author)}</span>
-                        <span className={styles.date}>
-                          {formatDate(reply.created_at)}
-                        </span>
+                        <span className={styles.date}>{formatDate(reply.created_at)}</span>
                         <span className={styles.edited}>{reply.is_edited}</span>
                       </div>
                       <div className={styles.likeContainer}>
-                        <button className={styles.likeAndReplyButton}>
-                          좋아요👍({reply.like_count})
-                        </button>
+                        <button className={styles.likeAndReplyButton}>좋아요👍({reply.like_count})</button>
                       </div>
                     </div>
                     <div className={styles.content}>{reply.content}</div>
@@ -254,10 +224,7 @@ const Post = () => {
           </div>
         ))}
         <div className={styles.commentInput}>
-          <form
-            className={styles.commentInputForm}
-            onSubmit={handleCommentSubmit}
-          >
+          <form className={styles.commentInputForm} onSubmit={handleCommentSubmit}>
             <textarea
               value={commentContent[null] || ""}
               onChange={(e) =>

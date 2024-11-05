@@ -6,7 +6,7 @@ import styles from "./WritePost.module.css";
 const WritePost = () => {
   // 로그인 상태 확인하고 아니면 전 페이지로 퇴장
   // 이메일 파이어베이스에서 가져오기
-  let email = "email";
+  let email = "find@gmail.com";
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [category, setCategory] = useState("");
@@ -38,6 +38,7 @@ const WritePost = () => {
       const data = await response.json();
       console.log("Post created:", data);
       // 성공 메시지와 게시판페이지로 넘어가기
+      window.location.href = `/postlist`;
       alert("등록되었습니다.");
     } catch (error) {
       console.error("Error creating post:", error);
@@ -50,35 +51,17 @@ const WritePost = () => {
       <h2>글쓰기</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <select
-            id="category"
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
-            required
-          >
+          <select id="category" value={category} onChange={(e) => setCategory(e.target.value)} required>
             <option value="">말머리</option>
             <option value="자유">자유</option>
             <option value="질문">질문</option>
           </select>
         </div>
         <div>
-          <input
-            type="text"
-            id="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            required
-            maxLength="100"
-            placeholder="제목"
-          />
+          <input type="text" id="title" value={title} onChange={(e) => setTitle(e.target.value)} required maxLength="100" placeholder="제목" />
         </div>
         <div>
-          <ReactQuill
-            value={content}
-            onChange={setContent}
-            modules={modules}
-            formats={formats}
-          />
+          <ReactQuill value={content} onChange={setContent} modules={modules} formats={formats} />
         </div>
 
         <button type="submit">작성</button>
@@ -103,20 +86,6 @@ const modules = {
   ],
 };
 
-const formats = [
-  "header",
-  "font",
-  "list",
-  "bullet",
-  "script",
-  "indent",
-  "direction",
-  "size",
-  "color",
-  "background",
-  "align",
-  "link",
-  "image",
-];
+const formats = ["header", "font", "list", "bullet", "script", "indent", "direction", "size", "color", "background", "align", "link", "image"];
 
 export default WritePost;

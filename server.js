@@ -17,10 +17,12 @@ const pool = new Pool({
 });
 
 // CORS 미들웨어 사용
-app.use(cors({
-  origin: "http://localhost:3000", // 클라이언트의 도메인
-  credentials: true, // 쿠키를 허용합니다
-}));
+app.use(
+  cors({
+    origin: "http://localhost:3000", // 클라이언트의 도메인
+    credentials: true, // 쿠키를 허용합니다
+  })
+);
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "build")));
 
@@ -216,7 +218,7 @@ app.get("/api/posts", async (req, res) => {
       SELECT id, title, author, category, created_at, views, comment_count
       FROM posts
       WHERE 1=1
-      ORDER BY id DESC
+      ORDER BY created_at DESC
       LIMIT $1 OFFSET $2
     `;
 
@@ -252,7 +254,7 @@ app.get("/api/posts", async (req, res) => {
         query += ` AND author LIKE $1`;
       }
       query += `
-      ORDER BY id DESC
+      ORDER BY created_at DESC
       LIMIT $2 OFFSET $3
     `;
 
@@ -387,6 +389,35 @@ app.post("/api/addComments", async (req, res) => {
   } catch (error) {
     console.error("Error inserting comment:", error);
     res.status(500).json({ success: false, message: "서버 오류가 발생했습니다." });
+  }
+});
+
+// 이차어때 페이지
+// enca 데이터베이스에서 데이터를 가져오는 API Listpage에서 사용
+app.get("/api/reviews", async (req, res) => {
+  try {
+    const result = await pool.query("SELECT * FROM review");
+    res.json(result.rows); // 모든 차량 데이터를 반환
+  } catch (err) {
+    console.error("Error fetching data from database:", err);
+    res.status(500).send("Server Error");
+  }
+});
+
+// 특정 차량번호에 맞는 데이터를 가져오는 API (추가할 코드) testpage에서 사용
+app.get("/api/reviews/:vehicleId", async (req, res) => {
+  const { vehicleId } = req.params;
+  try {
+    const result = await pool.query("SELECT * FROM review WHERE 차량번호 = $1", [vehicleId]);
+    if (result.rows.length > 0) {
+      res.json(result.rows[0]);
+    } else {
+      console.error(`Vehicle with 차량번호 ${vehicleId} not found`);
+      res.status(404).send("Vehicle not found");
+    }
+  } catch (err) {
+    console.error(`Error fetching vehicle data for 차량번호 ${vehicleId}:`, err);
+    res.status(500).send("Server Error");
   }
 });
 
