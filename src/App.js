@@ -6,6 +6,11 @@ import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import WishlistPage from "./pages/WishlistPage";
+import WritePostPage from "./pages/WritePostPage";
+import PostListPage from "./pages/PostListPage";
+import PostPage from "./pages/PostPage";
+import InfoPage from "./pages/InfoPage";
+import ListPage from "./pages/ListPage";
 import PrivateRoute from "./PrivateRoute";
 import { AuthProvider } from "./context/AuthContext";
 import { ToastContainer } from "react-toastify";
@@ -31,6 +36,12 @@ const App = () => {
               </PrivateRoute>
             }
           />
+          <Route path="/write" element={<WritePostPage />} />
+          <Route path="/postlist" element={<PostListPage />} />
+          <Route path="/post/:postId" element={<PostPage />} />
+          <Route path="/infopage" element={<InfoPage />} />
+          <Route path="/review" element={<ListPage />} />
+          <Route path="/reviews/:vehicleId" element={<InfoPage />} />
         </Routes>
       </AuthProvider>
     </>
