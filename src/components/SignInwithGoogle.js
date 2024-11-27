@@ -38,11 +38,11 @@ function SignInwithGoogle() {
         navigate("/");
       }
     } catch (error) {
-      console.log(error.message);
-      // 로그인 실패 시 에러 메시지 표시
-      toast.error(error.message, {
-        position: "bottom-center",
-      });
+      // console.log(error.message);
+      // // 로그인 실패 시 에러 메시지 표시
+      // toast.error(error.message, {
+      //   position: "bottom-center",
+      // });
     }
   }
 

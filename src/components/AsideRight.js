@@ -29,7 +29,9 @@ const AsideRight = () => {
           <span>
             <img className="chatbot-bottom" src="/icons/file.png" alt="file" />
           </span>
-          <a href="https://langchain-gwvhzwbsyg5treztdqri2p.streamlit.app/">챗봇으로 이동</a>
+          <a href="https://langchain-gwvhzwbsyg5treztdqri2p.streamlit.app/" target="_blank">
+            챗봇으로 이동
+          </a>
           <span>
             <img className="chatbot-bottom" src="/icons/mic.png" alt="mic" />
           </span>
